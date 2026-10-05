@@ -1,0 +1,102 @@
+import type {
+  Course,
+  DashboardStudent,
+  RiskSummary,
+  Session,
+  Student,
+  User,
+} from "@/types/api";
+export const teacher: User = {
+  id: "teacher-1",
+  school_id: "school-a",
+  email: "teacher@example.test",
+  role: "teacher",
+  first_name: "Maya",
+  last_name: "Sharma",
+  is_active: true,
+  last_login_at: null,
+};
+export const session: Session = {
+  access_token: "access-1",
+  refresh_token: "refresh-1",
+  token_type: "bearer",
+  user: teacher,
+};
+export const course: Course = {
+  id: "course-1",
+  school_id: "school-a",
+  classroom_id: "class-1",
+  subject_id: "subject-1",
+  academic_year: "2026",
+  is_active: true,
+};
+export const students: DashboardStudent[] = [
+  {
+    student_id: "student-1",
+    name: "Riya Patel",
+    roll_number: "10A-01",
+    support_level: "priority_support",
+    prediction_as_of_date: "2026-10-01",
+    trajectory: "declining",
+    newly_declining: true,
+    latest_score: 61,
+    attendance: 78,
+    top_signal: "Attendance decreased by 9.2 percentage points.",
+    active_intervention: true,
+  },
+  {
+    student_id: "student-2",
+    name: "Arjun Shah",
+    roll_number: "10A-02",
+    support_level: "doing_well",
+    prediction_as_of_date: "2026-10-01",
+    trajectory: "improving",
+    newly_declining: false,
+    latest_score: 84,
+    attendance: 96,
+    top_signal: null,
+    active_intervention: false,
+  },
+  {
+    student_id: "student-3",
+    name: "Neha Das",
+    roll_number: "10A-03",
+    support_level: "not_assessed",
+    prediction_as_of_date: null,
+    trajectory: "insufficient_history",
+    newly_declining: false,
+    latest_score: null,
+    attendance: null,
+    top_signal: null,
+    active_intervention: false,
+  },
+];
+export const summary: RiskSummary = {
+  course,
+  as_of_date: "2026-10-03",
+  counts: {
+    students: 3,
+    priority_support: 1,
+    watch: 0,
+    doing_well: 1,
+    not_assessed: 1,
+    newly_declining: 1,
+  },
+  students,
+  limit: 200,
+  offset: 0,
+};
+export const student: Student = {
+  id: "student-1",
+  school_id: "school-a",
+  user_id: "user-student-1",
+  roll_number: "10A-01",
+  grade_label: "Grade 10",
+  user: {
+    ...teacher,
+    id: "user-student-1",
+    first_name: "Riya",
+    last_name: "Patel",
+    role: "student",
+  },
+};
