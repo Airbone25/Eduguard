@@ -1,0 +1,14 @@
+.env
+.venv/
+.venv312/
+.python/
+.uv-cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.local/
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/model_metadata.json
