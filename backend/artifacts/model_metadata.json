@@ -1,0 +1,26 @@
+{
+  "model_name": "EduGuard Logistic Regression",
+  "model_version": "current-joblib-v1",
+  "feature_version": "weekly-v1",
+  "adapter_version": "pretrained-adapter-v1",
+  "sklearn_version": "1.6.1",
+  "artifact_sha256": "36e3841c41a3f74311f380cc72d7386dfbbf124d276b4a8e1a9277dd6e52feb5",
+  "feature_names": [
+    "Math", "Physics", "Chemistry", "Avg_Score", "Score_Std", "Attendance_Percent",
+    "Classes_Held", "Classes_Attended", "Study_Hours_Weekly", "Assignment_Count",
+    "Late_Submissions", "On_Time_Submissions", "Last_Minute_Submission_Rate",
+    "Avg_Submission_Delay_Days", "Assignment_Avg_Score", "Quiz_Count", "Quiz_Attempt_Count",
+    "Quiz_Avg_Score", "Quiz_Score_Volatility", "LMS_Login_Count", "LMS_Active_Days",
+    "Avg_LMS_Session_Min", "Total_LMS_Time_Min", "Days_Since_Last_Login",
+    "Participation_Count", "Participation_Rate", "Sentiment_Score", "Attendance_Change_4Wk",
+    "Score_Change_4Wk", "Study_Hours_Change_4Wk", "Attendance_3Wk_Avg", "Score_3Wk_Avg",
+    "Study_Hours_3Wk_Avg", "Attendance_Volatility", "Score_Volatility",
+    "Study_Hours_Volatility", "Late_Submission_Streak", "Low_Score_Streak",
+    "Engagement_Score", "Academic_Consistency"
+  ],
+  "thresholds": {"medium": 0.40, "high": 0.65, "at_risk": 0.50},
+  "subject_features": {"math": "Math", "mathematics": "Math", "phy": "Physics", "physics": "Physics", "chem": "Chemistry", "chemistry": "Chemistry"},
+  "provenance": "Feature order verified against artifact.feature_names_in_ and notebook EXCLUDE applied to CSV header; no notebook execution or training.",
+  "input_semantics": "Per-course weekly-v1 definitions in FEATURES.md. Unavailable subject marks and sentiment remain missing and use the artifact's fitted median imputer. Weekly means/volatility are operational definitions, not a claim to reproduce the synthetic dataset generator.",
+  "preprocessing": ["SimpleImputer(strategy=median), fitted", "StandardScaler, fitted", "LogisticRegression, fitted"]
+}
