@@ -1,0 +1,11 @@
+.venv
+.venv312
+.python
+.uv-cache
+.env
+.local
+__pycache__
+.pytest_cache
+pytest-cache-files-*
+.ruff_cache
+*.egg-info

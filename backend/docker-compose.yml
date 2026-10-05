@@ -1,0 +1,44 @@
+name: eduguard
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-eduguard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-eduguard}
+      POSTGRES_DB: ${POSTGRES_DB:-eduguard}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-eduguard}:${POSTGRES_PASSWORD:-eduguard}@postgres:5432/${POSTGRES_DB:-eduguard}
+      JWT_SECRET: ${JWT_SECRET:-development-only-change-this-secret-32-characters}
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173}
+      MODEL_BUNDLE_PATH: ${MODEL_BUNDLE_PATH:-artifacts/eduguard_risk_model.joblib}
+      MODEL_METADATA_PATH: ${MODEL_METADATA_PATH:-artifacts/model_metadata.json}
+      MODEL_REFERENCE_ROOT: /reference
+    volumes:
+      # Read-only source assets are used only by provenance verification/tests.
+      - ../EduGuard_AI_Risk_Detection_Colab.ipynb:/reference/EduGuard_AI_Risk_Detection_Colab.ipynb:ro
+      - ../student_dataset_enriched.csv:/reference/student_dataset_enriched.csv:ro
+      - ../eduguard_risk_model.joblib:/reference/eduguard_risk_model.joblib:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+volumes:
+  postgres_data:
