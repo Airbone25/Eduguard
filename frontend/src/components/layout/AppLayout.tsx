@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import {
+  ArrowRight,
   BookOpen,
   GraduationCap,
   LayoutDashboard,
@@ -11,6 +12,7 @@ import {
 import { useAuth } from "@/features/auth/context";
 import { roleHome, roleLabel } from "@/lib/utils";
 import { useUiStore } from "@/stores/uiStore";
+import { useSignalBand } from "@/stores/signalBandStore";
 import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import type { Role } from "@/types/api";
@@ -33,6 +35,8 @@ export function AppLayout({ role }: { role: Role }) {
   const [loggingOut, setLoggingOut] = useState(false);
   const menuTrigger = useRef<HTMLButtonElement>(null);
   const location = useLocation();
+  const band = useSignalBand((state) => state);
+  const activeBand = band.pathname === location.pathname ? band : null;
   const label = location.pathname.includes("/students/")
     ? "Student overview"
     : location.pathname.includes("/classes")
@@ -109,14 +113,17 @@ export function AppLayout({ role }: { role: Role }) {
       </nav>
       <div className="sidebar-note">
         <span className="note-icon">
-          <GraduationCap size={24} />
+          <ShieldCheck size={20} />
         </span>
-        <h3>Every student matters.</h3>
-        <p>Small steps. Meaningful progress. Support starts with you.</p>
+        <h3>Advisory by design</h3>
+        <p>
+          Signals come from recorded weekly observations. They guide a
+          conversation; they never replace your judgment.
+        </p>
       </div>
       <div className="sidebar-footer">
         <ShieldCheck size={15} />
-        <span>A space for student growth</span>
+        <span>Teacher-only signals · Never shown to students</span>
       </div>
     </>
   );
@@ -151,6 +158,7 @@ export function AppLayout({ role }: { role: Role }) {
               <span>/</span> <strong>{label}</strong>
             </span>
           </div>
+          <span className="governance-stamp">Advisory · Teacher only</span>
           <div className="account">
             <span className="avatar">
               {user?.first_name.slice(0, 1)}
@@ -176,12 +184,34 @@ export function AppLayout({ role }: { role: Role }) {
             </Button>
           </div>
         </header>
+        {activeBand && (
+          <section
+            className="decision-band"
+            data-tone={activeBand.tone}
+            aria-label="Current priority"
+          >
+            <span className="decision-icon" aria-hidden="true">
+              Index
+            </span>
+            <span className="decision-copy">
+              <span className="decision-label">{activeBand.label}</span>
+              <span className="decision-detail">{activeBand.detail}</span>
+            </span>
+            {activeBand.value && (
+              <span className="decision-value">{activeBand.value}</span>
+            )}
+            <a className="decision-action" href={`#${activeBand.targetId}`}>
+              {activeBand.actionLabel}
+              <ArrowRight size={15} aria-hidden="true" />
+            </a>
+          </section>
+        )}
         <main id="main-content" className="main-content" tabIndex={-1}>
           <Outlet />
         </main>
         <footer className="workspace-footer">
           <span>
-            EduGuard <span aria-hidden="true">·</span> Supporting potential
+            EduGuard <span aria-hidden="true">·</span> Advisory signal console
           </span>
           <span>Insights inform. Teachers decide.</span>
         </footer>

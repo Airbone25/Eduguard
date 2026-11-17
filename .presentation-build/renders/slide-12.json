@@ -1,0 +1,823 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/8f2psfyx",
+    "id": "8f2psfyx",
+    "slide": 12,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F7F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcbm583y",
+      "id": "6",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Work to be done and future scope",
+      "textPreview": "Work to be done and future scope",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Work to be done and future scope"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Work to be done and future scope",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#142C40",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Work to be done and future scope",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#142C40",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1gbm9s3a",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Proposed roadmap beyond the current minor-project implementation",
+      "textPreview": "Proposed roadmap beyond the current minor-project implementation",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Proposed roadmap beyond the current minor-project implementation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Proposed roadmap beyond the current minor-project implementation",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Proposed roadmap beyond the current minor-project implementation",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0f2lgnmp",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/54fepwbm",
+      "id": "7",
+      "bbox": [
+        58,
+        182,
+        1164,
+        355
+      ],
+      "text": "Sequence | Planned work | Acceptance focus\n1  Deployment readiness | Production rate-limiting\nPassword reset | Abuse resistance and secure account recovery\n2  Workflow integration | Google Calendar meeting synchronization | Authorized access and reliable event updates\n3  Model v2 | Stacked XGBoost / RandomForest ensemble | Compare against logistic regression on held-out data\n4  Student check-ins | Sentiment NLP classifier | Consent, privacy and subgroup error review",
+      "textPreview": "Sequence | Planned work | Acceptance focus | 1  Deployment readiness | Production rate-limiting | Password reset | Abuse resistance and s...",
+      "rows": 5,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            182,
+            235,
+            71
+          ],
+          "text": "Sequence",
+          "textPreview": "Sequence",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Sequence",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Sequence",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            293,
+            182,
+            433,
+            71
+          ],
+          "text": "Planned work",
+          "textPreview": "Planned work",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Planned work",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Planned work",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            726,
+            182,
+            496,
+            71
+          ],
+          "text": "Acceptance focus",
+          "textPreview": "Acceptance focus",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Acceptance focus",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Acceptance focus",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            253,
+            235,
+            71
+          ],
+          "text": "1  Deployment readiness",
+          "textPreview": "1  Deployment readiness",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "1  Deployment readiness",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "1  Deployment readiness",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            293,
+            253,
+            433,
+            71
+          ],
+          "text": "Production rate-limiting\nPassword reset",
+          "textPreview": "Production rate-limiting | Password reset",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Production rate-limiting",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Production rate-limiting",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Password reset",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Password reset",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            726,
+            253,
+            496,
+            71
+          ],
+          "text": "Abuse resistance and secure account recovery",
+          "textPreview": "Abuse resistance and secure account recovery",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Abuse resistance and secure account recovery",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Abuse resistance and secure account recovery",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            324,
+            235,
+            71
+          ],
+          "text": "2  Workflow integration",
+          "textPreview": "2  Workflow integration",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "2  Workflow integration",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "2  Workflow integration",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            293,
+            324,
+            433,
+            71
+          ],
+          "text": "Google Calendar meeting synchronization",
+          "textPreview": "Google Calendar meeting synchronization",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Google Calendar meeting synchronization",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Google Calendar meeting synchronization",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            726,
+            324,
+            496,
+            71
+          ],
+          "text": "Authorized access and reliable event updates",
+          "textPreview": "Authorized access and reliable event updates",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Authorized access and reliable event updates",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Authorized access and reliable event updates",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            395,
+            235,
+            71
+          ],
+          "text": "3  Model v2",
+          "textPreview": "3  Model v2",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3  Model v2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3  Model v2",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            293,
+            395,
+            433,
+            71
+          ],
+          "text": "Stacked XGBoost / RandomForest ensemble",
+          "textPreview": "Stacked XGBoost / RandomForest ensemble",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Stacked XGBoost / RandomForest ensemble",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Stacked XGBoost / RandomForest ensemble",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            726,
+            395,
+            496,
+            71
+          ],
+          "text": "Compare against logistic regression on held-out data",
+          "textPreview": "Compare against logistic regression on held-out data",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Compare against logistic regression on held-out data",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Compare against logistic regression on held-out data",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            58,
+            466,
+            235,
+            71
+          ],
+          "text": "4  Student check-ins",
+          "textPreview": "4  Student check-ins",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4  Student check-ins",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4  Student check-ins",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            293,
+            466,
+            433,
+            71
+          ],
+          "text": "Sentiment NLP classifier",
+          "textPreview": "Sentiment NLP classifier",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Sentiment NLP classifier",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Sentiment NLP classifier",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            726,
+            466,
+            496,
+            71
+          ],
+          "text": "Consent, privacy and subgroup error review",
+          "textPreview": "Consent, privacy and subgroup error review",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Consent, privacy and subgroup error review",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Consent, privacy and subgroup error review",
+                  "fontSize": 23,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q903ad4n",
+      "id": "5",
+      "bbox": [
+        63,
+        577,
+        1145,
+        99
+      ],
+      "geometry": "rect",
+      "text": "Validation gate: student-separated, time-aware evaluation with precision / recall, calibration and subgroup error checks.\nPilot gate: educator usability and measured follow-up outcomes before broad deployment.",
+      "textPreview": "Validation gate: student-separated, time-aware evaluation with precision / recall, calibration and subgroup error checks. | Pilot gate: e...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• Validation gate: student-separated, time-aware evaluation with precision / recall, calibration and subgroup error"
+          },
+          {
+            "index": 2,
+            "text": "checks."
+          },
+          {
+            "index": 3,
+            "text": "• Pilot gate: educator usability and measured follow-up outcomes before broad deployment."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Validation gate: student-separated, time-aware evaluation with precision / recall, calibration and subgroup error checks.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Validation gate: student-separated, time-aware evaluation with precision / recall, calibration and subgroup error checks.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Pilot gate: educator usability and measured follow-up outcomes before broad deployment.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pilot gate: educator usability and measured follow-up outcomes before broad deployment.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

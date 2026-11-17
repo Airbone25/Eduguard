@@ -26,26 +26,52 @@ def ordered_features(
 
 
 def predict(model: LoadedModel, values: dict[str, float | None]) -> dict:
-    if set(values) != set(model.feature_names):
+    return predict_batch(model, [values])[0]
+
+
+def predict_batch(
+    model: LoadedModel, rows: list[dict[str, float | None]]
+) -> list[dict]:
+    if not rows:
+        raise ValueError("No rows to predict")
+    if any(set(values) != set(model.feature_names) for values in rows):
         raise ValueError("Input feature names do not match model")
     frame = pd.DataFrame(
-        [[np.nan if values[name] is None else values[name] for name in model.feature_names]],
+        [
+            [np.nan if values[name] is None else values[name] for name in model.feature_names]
+            for values in rows
+        ],
         columns=model.feature_names,
     )
-    probability = float(model.pipeline.predict_proba(frame)[0, 1])
-    if not math.isfinite(probability) or not 0 <= probability <= 1:
-        raise ValueError("Model returned invalid probability")
+    probabilities = model.pipeline.predict_proba(frame)
+    if (
+        probabilities.shape != (len(rows), 2)
+        or not np.isfinite(probabilities).all()
+        or not np.all((probabilities >= 0) & (probabilities <= 1))
+        or not np.allclose(probabilities.sum(axis=1), 1)
+    ):
+        raise ValueError("Model returned invalid probabilities")
     thresholds = model.metadata["thresholds"]
-    level = (
-        "high"
-        if probability >= thresholds["high"]
-        else ("medium" if probability >= thresholds["medium"] else "low")
-    )
-    return {
-        "risk_probability": probability,
-        "risk_level": level,
-        "at_risk": probability >= thresholds["at_risk"],
-        "support_level": {"low": "doing_well", "medium": "watch", "high": "priority_support"}[
-            level
-        ],
-    }
+    outputs = []
+    for probability_value in probabilities[:, 1]:
+        probability = float(probability_value)
+        if not math.isfinite(probability) or not 0 <= probability <= 1:
+            raise ValueError("Model returned invalid probability")
+        level = (
+            "high"
+            if probability >= thresholds["high"]
+            else ("medium" if probability >= thresholds["medium"] else "low")
+        )
+        outputs.append(
+            {
+                "risk_probability": probability,
+                "risk_level": level,
+                "at_risk": probability >= thresholds["at_risk"],
+                "support_level": {
+                    "low": "doing_well",
+                    "medium": "watch",
+                    "high": "priority_support",
+                }[level],
+            }
+        )
+    return outputs

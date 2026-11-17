@@ -8,8 +8,15 @@ from app.core.exceptions import APIError
 from app.db.session import get_db
 from app.ml.model_loader import LoadedModel
 from app.models import User
-from app.schemas.prediction import ClassPredictionRequest, PredictionRequest, PredictionResponse
-from app.services import prediction_service as service
+from app.schemas.prediction import (
+    ClassPredictionRequest,
+    ForecastResponse,
+    PredictionRequest,
+    PredictionResponse,
+    WhatIfRequest,
+    WhatIfResponse,
+)
+from app.services import forecast_service, prediction_service as service
 
 router = APIRouter(prefix="/teacher", tags=["predictions"])
 
@@ -44,10 +51,34 @@ def predictions(
     course_offering_id: UUID,
     teacher: User = Depends(require_teacher),
     db: Session = Depends(get_db),
+    model: LoadedModel = Depends(current_model),
     limit: int = Query(100, ge=1, le=200),
     offset: int = Query(0, ge=0),
 ):
-    return service.list_predictions(db, teacher, student_id, course_offering_id, limit, offset)
+    return service.list_predictions(
+        db, teacher, student_id, course_offering_id, limit, offset, model
+    )
+
+
+@router.get("/students/{student_id}/forecast", response_model=ForecastResponse)
+def forecast(
+    student_id: UUID,
+    course_offering_id: UUID,
+    teacher: User = Depends(require_teacher),
+    db: Session = Depends(get_db),
+    model: LoadedModel = Depends(current_model),
+):
+    return forecast_service.student_forecast(db, teacher, student_id, course_offering_id, model)
+
+
+@router.post("/predictions/what-if", response_model=WhatIfResponse)
+def what_if(
+    data: WhatIfRequest,
+    teacher: User = Depends(require_teacher),
+    db: Session = Depends(get_db),
+    model: LoadedModel = Depends(current_model),
+):
+    return service.simulate_what_if(db, teacher, data, model)
 
 
 @router.post(

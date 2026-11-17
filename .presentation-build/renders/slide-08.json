@@ -1,0 +1,778 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/fu1gfa1s",
+    "id": "fu1gfa1s",
+    "slide": 8,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F7F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tkby9kzm",
+      "id": "6",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Tools and technologies used",
+      "textPreview": "Tools and technologies used",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tools and technologies used"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tools and technologies used",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#142C40",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tools and technologies used",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#142C40",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18byd4zy",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "A typed application stack with explicit data and security boundaries",
+      "textPreview": "A typed application stack with explicit data and security boundaries",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A typed application stack with explicit data and security boundaries"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A typed application stack with explicit data and security boundaries",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A typed application stack with explicit data and security boundaries",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g72x4zyd",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/503u1oze",
+      "id": "7",
+      "bbox": [
+        58,
+        182,
+        1164,
+        410
+      ],
+      "text": "Category | Tools and technologies\nFrontend | React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4\nshadcn/ui, TanStack Query, Recharts, Zustand\nBackend | Python 3.12, FastAPI, Pydantic v2\nDatabase / ORM | PostgreSQL 16, CITEXT, SQLAlchemy 2.0, Alembic\nML / Data | scikit-learn 1.6.1, serialized preprocessing + LogisticRegression\nTesting / DevOps | PostgreSQL integration tests, Vitest, MSW\nAlembic migration workflow and Vite production build\nSecurity | Argon2id password hashing, PyJWT, role and tenant authorization",
+      "textPreview": "Category | Tools and technologies | Frontend | React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4 | shadcn/ui, TanStack Query, Recharts, Zu...",
+      "rows": 7,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            182,
+            245,
+            58.57
+          ],
+          "text": "Category",
+          "textPreview": "Category",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Category",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Category",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            303,
+            182,
+            919,
+            58.57
+          ],
+          "text": "Tools and technologies",
+          "textPreview": "Tools and technologies",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Tools and technologies",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Tools and technologies",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            240.57,
+            245,
+            58.57
+          ],
+          "text": "Frontend",
+          "textPreview": "Frontend",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Frontend",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Frontend",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            303,
+            240.57,
+            919,
+            58.57
+          ],
+          "text": "React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4\nshadcn/ui, TanStack Query, Recharts, Zustand",
+          "textPreview": "React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4 | shadcn/ui, TanStack Query, Recharts, Zustand",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "React 19, TypeScript 5.9, Vite 7, Tailwind CSS 4",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "shadcn/ui, TanStack Query, Recharts, Zustand",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "shadcn/ui, TanStack Query, Recharts, Zustand",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            299.14,
+            245,
+            58.57
+          ],
+          "text": "Backend",
+          "textPreview": "Backend",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Backend",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Backend",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            303,
+            299.14,
+            919,
+            58.57
+          ],
+          "text": "Python 3.12, FastAPI, Pydantic v2",
+          "textPreview": "Python 3.12, FastAPI, Pydantic v2",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Python 3.12, FastAPI, Pydantic v2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Python 3.12, FastAPI, Pydantic v2",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            357.71,
+            245,
+            58.57
+          ],
+          "text": "Database / ORM",
+          "textPreview": "Database / ORM",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Database / ORM",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Database / ORM",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            303,
+            357.71,
+            919,
+            58.57
+          ],
+          "text": "PostgreSQL 16, CITEXT, SQLAlchemy 2.0, Alembic",
+          "textPreview": "PostgreSQL 16, CITEXT, SQLAlchemy 2.0, Alembic",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "PostgreSQL 16, CITEXT, SQLAlchemy 2.0, Alembic",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "PostgreSQL 16, CITEXT, SQLAlchemy 2.0, Alembic",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            58,
+            416.29,
+            245,
+            58.57
+          ],
+          "text": "ML / Data",
+          "textPreview": "ML / Data",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ML / Data",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ML / Data",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            303,
+            416.29,
+            919,
+            58.57
+          ],
+          "text": "scikit-learn 1.6.1, serialized preprocessing + LogisticRegression",
+          "textPreview": "scikit-learn 1.6.1, serialized preprocessing + LogisticRegression",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "scikit-learn 1.6.1, serialized preprocessing + LogisticRegression",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "scikit-learn 1.6.1, serialized preprocessing + LogisticRegression",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            58,
+            474.86,
+            245,
+            58.57
+          ],
+          "text": "Testing / DevOps",
+          "textPreview": "Testing / DevOps",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Testing / DevOps",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Testing / DevOps",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            303,
+            474.86,
+            919,
+            58.57
+          ],
+          "text": "PostgreSQL integration tests, Vitest, MSW\nAlembic migration workflow and Vite production build",
+          "textPreview": "PostgreSQL integration tests, Vitest, MSW | Alembic migration workflow and Vite production build",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "PostgreSQL integration tests, Vitest, MSW",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "PostgreSQL integration tests, Vitest, MSW",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Alembic migration workflow and Vite production build",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Alembic migration workflow and Vite production build",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            58,
+            533.43,
+            245,
+            58.57
+          ],
+          "text": "Security",
+          "textPreview": "Security",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Security",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Security",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            303,
+            533.43,
+            919,
+            58.57
+          ],
+          "text": "Argon2id password hashing, PyJWT, role and tenant authorization",
+          "textPreview": "Argon2id password hashing, PyJWT, role and tenant authorization",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Argon2id password hashing, PyJWT, role and tenant authorization",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Argon2id password hashing, PyJWT, role and tenant authorization",
+                  "fontSize": 22,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6h0fypgb",
+      "id": "5",
+      "bbox": [
+        62,
+        629,
+        1151,
+        44
+      ],
+      "geometry": "rect",
+      "text": "The stack supports typed interfaces, repeatable database evolution and reproducible model inference.",
+      "textPreview": "The stack supports typed interfaces, repeatable database evolution and reproducible model inference.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• The stack supports typed interfaces, repeatable database evolution and reproducible model inference."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The stack supports typed interfaces, repeatable database evolution and reproducible model inference.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The stack supports typed interfaces, repeatable database evolution and reproducible model inference.",
+              "fontSize": 22,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

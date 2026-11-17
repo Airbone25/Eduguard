@@ -9,10 +9,11 @@ import {
   Search,
   Users,
 } from "lucide-react";
-import { useAuth } from "@/features/auth/context";
+import { AlertFeed } from "@/features/alerts/AlertFeed";
 import { useClassSummary, useTeacherClasses } from "@/features/classes/hooks";
 import { AttentionTable } from "@/features/students/AttentionTable";
 import { useUiStore } from "@/stores/uiStore";
+import { useSetSignalBand } from "@/stores/signalBandStore";
 import {
   EmptyState,
   ErrorState,
@@ -25,12 +26,21 @@ import { courseLabel, dateLabel } from "@/lib/utils";
 import type { SummarySort, Trend } from "@/types/api";
 
 export default function Dashboard() {
-  const { user } = useAuth();
   const ui = useUiStore();
   const classes = useTeacherClasses();
   const course =
     classes.data?.find((c) => c.id === ui.courseId) ?? classes.data?.[0];
   const summary = useClassSummary(course?.id ?? "", ui.sort);
+  const signalCount =
+    (summary.data?.counts.priority_support ?? 0) +
+    (summary.data?.counts.watch ?? 0);
+  useSetSignalBand({
+    label: "Signal index",
+    detail: "Weekly observations, classified and ready for your review",
+    value: summary.data ? String(signalCount).padStart(2, "0") : null,
+    targetId: "alert-feed-title",
+    actionLabel: "Open the index",
+  });
   const filtered = useMemo(
     () =>
       summary.data?.students.filter(
@@ -63,9 +73,8 @@ export default function Dashboard() {
   return (
     <>
       <PageHeader
-        eyebrow="Teacher overview"
-        title={`Hello, ${user?.first_name ?? "there"}.`}
-        description="A little clarity for the students who count on you."
+        title="Signal index"
+        description="A classified queue of advisory signals from weekly observations. Open a card, read its evidence slip, then decide the next step."
       >
         <Button
           variant="outline"
@@ -79,6 +88,7 @@ export default function Dashboard() {
           Refresh
         </Button>
       </PageHeader>
+      <AlertFeed />
       {!course ? (
         <section className="panel">
           <EmptyState
@@ -174,7 +184,7 @@ export default function Dashboard() {
                           {data.counts.students}
                         </span>
                       </div>
-                      <p>A starting point for thoughtful, timely support.</p>
+                      <p>Filter the cohort to focus your review. Every signal is advisory.</p>
                     </div>
                     <label className="sort-field">
                       Sort by
@@ -290,11 +300,11 @@ export default function Dashboard() {
                       <HeartHandshake size={23} />
                     </span>
                     <div>
-                      <h2>Support is a conversation.</h2>
+                      <h2>Advisory, not automatic.</h2>
                       <p>
-                        Use these signals alongside what you know about your
-                        students. Every insight is a starting point, and the
-                        next step is yours.
+                        Signals are computed from weekly observations and never
+                        shown to students. Bring your own context before you
+                        act on one.
                       </p>
                     </div>
                   </section>

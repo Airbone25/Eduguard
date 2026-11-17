@@ -38,7 +38,6 @@ export default function StudentDashboard() {
   return (
     <>
       <PageHeader
-        eyebrow="Your learning space"
         title={`You’ve got this, ${user?.first_name ?? "learner"}.`}
         description="Small steps add up. Here’s how your learning is taking shape."
       />

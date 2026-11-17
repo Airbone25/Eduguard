@@ -90,7 +90,6 @@ export default function ClassAnalytics() {
         ← Back to my classes
       </Link>
       <PageHeader
-        eyebrow="Class overview"
         title={course ? courseLabel(course) : `Course ${courseId.slice(0, 8)}`}
         description="Understand progress across your class without ranking students."
       >

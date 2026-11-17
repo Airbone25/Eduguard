@@ -28,7 +28,6 @@ export default function Classes() {
   return (
     <>
       <PageHeader
-        eyebrow="Your teaching space"
         title="My classes"
         description="The courses you’re assigned to. The students you help move forward."
       />
@@ -73,7 +72,6 @@ export function ClassDetail() {
   return (
     <>
       <PageHeader
-        eyebrow="Class roster"
         title={`Course ${courseId.slice(0, 8)}`}
         description="Students currently enrolled in this assigned course."
       />

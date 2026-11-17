@@ -1,0 +1,52 @@
+{
+  "selection_metric": "roc_auc (out-of-fold)",
+  "selected_model": "logistic_regression",
+  "rows": 23562,
+  "students": 800,
+  "positives": 8828,
+  "positive_rate": 0.3747,
+  "roc_auc": 0.9999,
+  "pr_auc": 0.9998,
+  "brier": 0.0038,
+  "log_loss": 0.0128,
+  "expected_calibration_error": 0.0019,
+  "train_roc_auc": 0.9999,
+  "cv_folds": 5,
+  "split": "GroupKFold by student",
+  "threshold_derivation": {
+    "at_risk": "F2-optimal out-of-fold cut",
+    "medium": "half of the at_risk cut (start watching)",
+    "high": "halfway from at_risk cut to certainty (priority support)"
+  },
+  "candidates": [
+    {
+      "name": "logistic_regression",
+      "roc_auc": 0.9999,
+      "pr_auc": 0.9998,
+      "brier": 0.0038,
+      "log_loss": 0.0128,
+      "ece": 0.0019
+    },
+    {
+      "name": "random_forest",
+      "roc_auc": 0.9999,
+      "pr_auc": 0.9998,
+      "brier": 0.0037,
+      "log_loss": 0.0146,
+      "ece": 0.0049
+    },
+    {
+      "name": "hist_gradient_boosting",
+      "roc_auc": 0.9999,
+      "pr_auc": 0.9998,
+      "brier": 0.0029,
+      "log_loss": 0.0116,
+      "ece": 0.0017
+    }
+  ],
+  "thresholds": {
+    "medium": 0.1186,
+    "high": 0.6186,
+    "at_risk": 0.2372
+  }
+}

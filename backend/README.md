@@ -1,11 +1,13 @@
-# EduGuard backend — school management and pretrained inference
+# EduGuard backend — school management and ML inference
 
 FastAPI, PostgreSQL, SQLAlchemy 2, Alembic, Pydantic 2, Argon2id and JWT authentication.
 Python 3.12 or 3.13 is required; this checkout was verified with Python 3.12.14.
-Milestones 1–7, pretrained inference, explanations, recommendations and intervention
+Milestones 1–7, inference, explanations, recommendations and intervention
 tracking, teacher dashboards, student progress/privacy, and CSV imports (through Milestone 15)
 are implemented. See [PROGRESS.md](PROGRESS.md) and [IMPORTS.md](IMPORTS.md) for new API contracts.
-The user's existing model replaces Milestone 8's training task. No model was retrained.
+Milestone 8's training task is now real: `scripts/generate_synthetic_weekly.py` +
+`scripts/train_model.py` generate longitudinal data and retrain the risk model end to end
+(see "Model contract" below).
 `/ready` checks PostgreSQL and successful model loading/validation.
 
 ## Start with Docker
@@ -37,11 +39,11 @@ The local ignored `.env` may already contain your supplied database connection.
 
 ```powershell
 cd backend
-py -3.12 -m venv .venv
-.venv\Scripts\python -m pip install -e ".[dev]"
-.venv\Scripts\python -m alembic upgrade head
-.venv\Scripts\python scripts/seed_demo.py
-.venv\Scripts\python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+py -3.12 -m venv .venv312
+.venv312\Scripts\python -m pip install -e ".[dev]"
+.venv312\Scripts\python -m alembic upgrade head
+.venv312\Scripts\python -m scripts.seed_demo
+.\start.ps1
 ```
 
 This checkout already contains a verified `.venv312` environment. To start it from the
@@ -49,18 +51,43 @@ repository root:
 
 ```powershell
 cd backend
-.venv312\Scripts\python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+.\start.ps1
 ```
 
-Replace `.venv` with `.venv312` in the commands below when using that environment.
+The launcher uses `.venv312` explicitly and refuses to start if its interpreter is
+not Python 3.12. Activation is unnecessary. `start.ps1 -CheckOnly` checks the
+interpreter and application imports without launching a server; model and database
+readiness are checked by `/ready` after startup. Use `-Port 8001` for another port.
 The original Python 3.14 `.venv` cannot run the pinned scikit-learn 1.6.1 artifact.
+
+### Repair a Python version mismatch in this checkout
+
+The environment folder name does not select the Python version. Running
+`python -m venv .venv312` with global Python 3.14 can replace its interpreter while
+leaving Python 3.12 binary packages in place. This causes errors such as
+`No module named 'pydantic_core._pydantic_core'`.
+
+For this checkout's existing Python 3.12 packages, restore the bundled interpreter
+without clearing or reinstalling those packages (run from `backend/`):
+
+```powershell
+& .\.python\cpython-3.12.14-windows-x86_64-none\python.exe -m venv --without-pip .venv312
+& .\.venv312\Scripts\python.exe --version
+& .\.venv312\Scripts\python.exe -m pip check
+& .\.venv312\Scripts\Activate.ps1
+```
+
+The version must read `Python 3.12.14`. This repair applies to the mixed environment
+described above; for a new checkout, create a fresh environment with a supported
+Python version using the installation instructions above. Do not recreate it with
+an unqualified `python` pointing to Python 3.14.
 
 In a second terminal, from `backend/`:
 
 ```powershell
-.venv\Scripts\python -m pytest
-.venv\Scripts\python -m ruff check .
-.venv\Scripts\python scripts/smoke_test.py
+.venv312\Scripts\python -m pytest
+.venv312\Scripts\python -m ruff check .
+.venv312\Scripts\python -m scripts.smoke_test
 ```
 
 ## Demo data
@@ -129,6 +156,7 @@ IDs, connecting classroom, subject and academic year. Use IDs returned by creati
 | POST | `/teacher/students/{student_id}/predictions` |
 | GET | `/teacher/students/{student_id}/predictions?course_offering_id=...` |
 | POST | `/teacher/classes/{course_id}/predictions` |
+| POST | `/teacher/predictions/what-if` |
 | POST | `/teacher/students/{student_id}/interventions` |
 | GET | `/teacher/students/{student_id}/interventions?course_offering_id=&status=` |
 | GET | `/teacher/interventions/{intervention_id}` |
@@ -138,11 +166,38 @@ IDs, connecting classroom, subject and academic year. Use IDs returned by creati
 | GET, POST | `/admin/intervention-templates` |
 | PATCH | `/admin/intervention-templates/{template_id}` |
 | GET | `/teacher/classes/{course_id}/risk-summary` |
+| GET | `/teacher/alerts?as_of_date=&limit=&offset=` |
 | GET | `/teacher/students/{student_id}/progress?course_offering_id=...` |
 | GET | `/student/me/dashboard`, `/student/me/progress` |
 | GET | `/student/me/interventions`, `/student/me/goals` |
 | GET | `/admin/imports`, `/admin/imports/{job_id}` |
 | POST | `/admin/imports/students`, `/admin/imports/weekly-records` |
+
+`GET /teacher/alerts` is the cross-course signal feed for the AI alert inbox. For each
+(student, course) with at least one saved prediction, it derives exactly one alert kind:
+`declining` when risk rose by ≥ 0.05 between the two most recent predictions,
+`needs_support` when the latest prediction is at-risk with no open intervention,
+`new_data` when weekly records exist beyond the last insight's `as_of_date`, and
+`improving` when risk fell by ≥ 0.05. Quiet students are excluded. All set-based
+(window function, grouped aggregates); every query is tenant-filtered to the
+authenticated teacher's active courses, so revoked assignments vanish from the feed.
+
+**Explainability.** Every prediction response carries `contributions` — the
+per-feature attributions behind that probability. For the linear risk model the
+attribution is exact (`coefficient × standardized value`), contributions plus
+the intercept reproduce the log-odds exactly (asserted in tests), and names are
+aligned to the columns the classifier actually sees after the imputer drops
+never-observed inputs. Attributions are recomputed at read time from the stored
+snapshot, so they always reflect the deployed model re-evaluating the exact
+recorded inputs.
+
+**What-if simulator.** `POST /teacher/predictions/what-if` with
+`{"prediction_id": ..., "overrides": {"Attendance_Percent": 95, ...}}` re-scores
+the stored snapshot with overridden values and returns baseline/new probability,
+support level and delta. Overrides are limited to a whitelist of interpretable
+features with safe ranges (`UNKNOWN_SIMULATION_FEATURE`,
+`SIMULATION_VALUE_OUT_OF_RANGE` otherwise); nothing is persisted and no school
+data changes. Course-level authorization applies (`404` for outsiders).
 
 Weekly PUT example (Monday `week_start` in the URL):
 
@@ -212,13 +267,29 @@ without its history.
 for courses assigned to them; students have no intervention endpoints yet (Milestone 14).
 Recommendations remain suggestions — nothing creates an intervention automatically.
 
-## Pretrained model contract
+## Model contract
 
-`artifacts/eduguard_risk_model.joblib` is a byte-identical copy of the supplied artifact:
-**SimpleImputer (median) → StandardScaler → LogisticRegression**, trained with scikit-learn
-1.6.1. The artifact embeds all 40 feature names, their ordering, and binary classes `[0, 1]`.
-`artifacts/model_metadata.json` supplies version `current-joblib-v1`, checksum, thresholds,
-feature/adapter versions and provenance. It does not invent training metrics or a training date.
+`artifacts/eduguard_risk_model.joblib` is a fitted **SimpleImputer (median) → StandardScaler →
+LogisticRegression** pipeline, retrained by `scripts/train_model.py` (scikit-learn 1.6.1) on
+synthetic longitudinal weekly records. The artifact embeds all 40 feature names, their
+ordering, and binary classes `[0, 1]`. `artifacts/model_metadata.json` supplies the version,
+checksum, thresholds, feature/adapter versions, out-of-fold metrics, preprocessing step names,
+training date and provenance — and is the only model file tracked in git.
+
+Reproduce the full pipeline (generate data, then train, evaluate and self-verify):
+
+```powershell
+.venv312\Scripts\python -m scripts.generate_synthetic_weekly
+.venv312\Scripts\python -m scripts.train_model --overwrite
+```
+
+Features are computed by the production `app.ml.feature_builder` from raw weekly rows —
+never from a precomputed table — so training and serving share one code path. Model selection
+compares logistic regression, histogram gradient boosting and random forest with 5-fold
+GroupKFold split by student; thresholds are derived from out-of-fold probabilities
+(`at_risk` = F2-optimal cut, `medium`/`high` anchored to it). The script writes both the
+backend artifact and the repo-root mirror, backs up the previous artifact to
+`outputs/previous_artifact.joblib`, and only replaces files when `--overwrite` is passed.
 
 `MODEL_BUNDLE_PATH` and `MODEL_METADATA_PATH` resolve relative to `backend/` (or `/app` in
 Docker). Startup validates checksum, runtime version, fitted state, feature names/count/order,
@@ -226,23 +297,28 @@ thresholds and usable probabilities with missing inputs. Failure leaves `/health
 available but returns `MODEL_UNAVAILABLE` from `/ready` and prediction requests.
 
 The prediction service builds features from authorized weekly history through `as_of_date`,
-explicitly orders them using the training contract, and runs the existing fitted pipeline.
-At-risk threshold is 0.50; support levels are `doing_well` below 0.40, `watch` from 0.40 to
-below 0.65, and `priority_support` from 0.65. Model registry, exact ordered input snapshot,
+explicitly orders them using the training contract, and runs the fitted pipeline. Thresholds
+are read from metadata (`medium` / `high` / `at_risk`), so support levels track retraining:
+`doing_well` below `medium`, `watch` from `medium` to below `high`, `priority_support` from
+`high`, and `at_risk` is the binary cut. Model registry, exact ordered input snapshot,
 prediction, measurable signals, suggested actions and audit entry are persisted atomically.
+The registry keeps exactly one active version: retraining swaps it in cleanly, while a row
+whose checksum no longer matches the loaded artifact still fails with `MODEL_VERSION_CONFLICT`
+instead of being overwritten.
 Templates are suggestions only; the system does not create interventions automatically.
 Seven global templates are seeded by migration; school-specific templates can override them
 by name, including disabling a default. Global templates cannot be edited by school admins.
 
 See [FEATURES.md](FEATURES.md) for formulas and minimum history. Missing historical values
-remain null in snapshots; only the original model's fitted imputer fills model inputs.
+remain null in snapshots; only the model's fitted imputer fills model inputs.
 Unobserved other-subject marks and sentiment stay missing. No PII, labels, free text,
 `Risk_Score`, `Risk_Level`, or `At_Risk` enter inference.
 
 **Data limitation:** weekly per-course averages and dispersion have explicit operational
-definitions. The notebook reads a precomputed synthetic CSV and does not establish all
-source-generation formulas. This integration verifies preprocessing and feature order; it
-does not establish calibration or real-school predictive validity. Cross-subject marks are
+definitions. The training corpus is synthetic (generated personas and noisy weekly
+observations with known ground-truth labels), so reported out-of-fold metrics bound what the
+pipeline can achieve, not real-school predictive validity. Real deployments retrain on
+exported, consented school data with the same script. Cross-subject marks are
 not inferred from another teacher's restricted courses. Weekly dates cannot reconstruct
 intraweek event times or past versions of edited records; saved prediction snapshots are fixed.
 
@@ -259,8 +335,8 @@ provenance check also runs in container tests. They are not read by the predicti
 
 - `app/api/`: thin routes and reusable current-user/role/teacher-resource dependencies.
 - `app/services/`: auth, school management, teacher access, weekly records, features,
-  predictions, explanations, recommendations, template management, interventions, dashboards,
-  measured student progress and transactional CSV imports.
+  predictions, explanations, recommendations, template management, interventions, alerts,
+  dashboards, measured student progress and transactional CSV imports.
 - `app/ml/`: pure weekly feature calculations, validated model loader and ordered inference.
 - `app/core/`: settings, errors, Argon2/JWT helpers, assignment and tenant authorization.
 - `app/models/`: School, User, TeacherProfile, StudentProfile, Classroom, Subject,

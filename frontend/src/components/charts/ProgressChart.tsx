@@ -42,19 +42,19 @@ export function ProgressChart({
         <div className="chart-frame" aria-hidden="true">
           <ResponsiveContainer width="100%" height="100%" minWidth={0}>
             <LineChart data={data} accessibilityLayer={false}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+              <CartesianGrid stroke="#e7e2d6" strokeDasharray="3 3" vertical={false} />
               <XAxis
                 dataKey="week_start"
                 tickFormatter={(date) => date.slice(5)}
-                tick={{ fontSize: 11 }}
+                tick={{ fontSize: 11, fill: "#74796e" }}
               />
-              <YAxis domain={[0, 100]} tick={{ fontSize: 11 }} />
+              <YAxis domain={[0, 100]} tick={{ fontSize: 11, fill: "#74796e" }} />
               <Tooltip labelFormatter={(label) => dateLabel(String(label))} />
               <Line
                 type="linear"
                 dataKey={metric}
                 name={title}
-                stroke="#205e4e"
+                stroke="#20241f"
                 strokeWidth={2.5}
                 dot={{ r: 3 }}
                 connectNulls={false}

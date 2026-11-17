@@ -53,7 +53,6 @@ export default function Imports() {
   return (
     <>
       <PageHeader
-        eyebrow="Administration"
         title="Bring your information together."
         description="Validate a CSV, review every issue, then confirm the import."
       />

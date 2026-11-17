@@ -27,7 +27,6 @@ export default function Progress() {
   return (
     <>
       <PageHeader
-        eyebrow="Your progress"
         title="Look how far you’re coming."
         description="Compare with your own earlier weeks, at your own pace."
       />

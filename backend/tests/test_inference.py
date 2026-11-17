@@ -27,11 +27,10 @@ def test_original_artifact_and_exact_notebook_order(model):
     )
     assert list(model.feature_names) == expected
     assert len(expected) == model.pipeline.n_features_in_ == 40
-    assert [type(step).__name__ for _, step in model.pipeline.steps] == [
-        "SimpleImputer",
-        "StandardScaler",
-        "LogisticRegression",
-    ]
+    # The artifact's actual pipeline steps must match its recorded preprocessing.
+    assert [type(step).__name__ for _, step in model.pipeline.steps] == list(
+        model.metadata["preprocessing"]
+    )
     assert model.pipeline.classes_.tolist() == [0, 1]
     assert (
         hashlib.sha256((root / "eduguard_risk_model.joblib").read_bytes()).hexdigest()

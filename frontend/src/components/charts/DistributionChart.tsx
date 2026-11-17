@@ -20,13 +20,13 @@ export function DistributionChart({
       <div className="chart-frame" aria-hidden="true">
         <ResponsiveContainer width="100%" height="100%" minWidth={0}>
           <BarChart data={values} accessibilityLayer={false}>
-            <CartesianGrid vertical={false} />
-            <XAxis dataKey="name" tick={{ fontSize: 10 }} interval={0} />
-            <YAxis allowDecimals={false} />
+            <CartesianGrid stroke="#e7e2d6" vertical={false} />
+            <XAxis dataKey="name" tick={{ fontSize: 10, fill: "#74796e" }} interval={0} />
+            <YAxis allowDecimals={false} tick={{ fontSize: 10, fill: "#74796e" }} />
             <Tooltip />
             <Bar
               dataKey="count"
-              fill="#4c8468"
+              fill="#20241f"
               radius={[4, 4, 0, 0]}
               isAnimationActive={false}
             />

@@ -1,15 +1,20 @@
-from datetime import date
+from datetime import UTC, date, datetime
 from uuid import UUID
 
-from sqlalchemy import select
-from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy import and_, not_, select, update
+from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.orm import Session
 
 from app.core.exceptions import APIError
+from app.ml.explain import feature_contributions
 from app.ml.inference import ordered_features, predict
 from app.ml.model_loader import LoadedModel
 from app.models import CourseOffering, FeatureSnapshot, ModelVersion, RiskPrediction, Subject, User
-from app.schemas.prediction import PredictionResponse
+from app.schemas.prediction import (
+    PredictionResponse,
+    WhatIfRequest,
+    WhatIfResponse,
+)
 from app.services.common import audit, tenant_row, transaction
 from app.services.explanation_service import explanation_signals
 from app.services.feature_service import build_student_features
@@ -20,8 +25,21 @@ from app.services.weekly_record_service import authorized_enrollment
 
 def registered_version(db: Session, model: LoadedModel) -> ModelVersion:
     meta = model.metadata
+    identity = and_(
+        ModelVersion.name == meta["model_name"],
+        ModelVersion.version == meta["model_version"],
+    )
+    # The registry keeps exactly one active version. Deactivate every other
+    # version, then activate the loaded artifact — so a legitimately retrained
+    # artifact swaps in cleanly, while a row whose checksum no longer matches
+    # the artifact still fails validation below instead of being overwritten.
     db.execute(
-        insert(ModelVersion)
+        update(ModelVersion)
+        .where(ModelVersion.is_active.is_(True), not_(identity))
+        .values(is_active=False)
+    )
+    db.execute(
+        pg_insert(ModelVersion)
         .values(
             name=meta["model_name"],
             version=meta["model_version"],
@@ -29,17 +47,17 @@ def registered_version(db: Session, model: LoadedModel) -> ModelVersion:
             artifact_sha256=meta["artifact_sha256"],
             feature_version=meta["feature_version"],
             thresholds=meta["thresholds"],
-            metrics={},
+            metrics=meta.get("metrics", {}),
+            trained_at=(
+                datetime.fromisoformat(meta["trained_at"]).replace(tzinfo=UTC)
+                if meta.get("trained_at")
+                else None
+            ),
             is_active=True,
         )
-        .on_conflict_do_nothing()
+        .on_conflict_do_update(index_elements=["name", "version"], set_={"is_active": True})
     )
-    version = db.scalar(
-        select(ModelVersion).where(
-            ModelVersion.name == meta["model_name"],
-            ModelVersion.version == meta["model_version"],
-        )
-    )
+    version = db.scalar(select(ModelVersion).where(identity))
     if (
         version is None
         or not version.is_active
@@ -56,8 +74,15 @@ def registered_version(db: Session, model: LoadedModel) -> ModelVersion:
 
 
 def response(
-    row: RiskPrediction, snapshot: FeatureSnapshot, version: ModelVersion
+    row: RiskPrediction, snapshot: FeatureSnapshot, version: ModelVersion, model: LoadedModel
 ) -> PredictionResponse:
+    # Attributions are recomputed from the stored snapshot against the current
+    # model: the explanation always reflects the model that is deployed now,
+    # re-evaluating the exact recorded inputs.
+    try:
+        explained = feature_contributions(model, snapshot.features.get("values", {}))
+    except (ValueError, TypeError, KeyError):
+        explained = {"contributions": [], "exact": False, "intercept": None, "logit": None}
     return PredictionResponse(
         id=row.id,
         student_id=row.student_id,
@@ -76,6 +101,7 @@ def response(
         ],
         signals=row.explanations,
         recommendations=row.recommendations,
+        contributions=explained["contributions"],
     )
 
 
@@ -147,7 +173,7 @@ def predict_one(
         row.id,
         {"model_version_id": str(version.id), "feature_snapshot_id": str(snapshot.id)},
     )
-    return response(row, snapshot, version)
+    return response(row, snapshot, version, model)
 
 
 def predict_student(
@@ -182,7 +208,13 @@ def predict_class(
 
 
 def list_predictions(
-    db: Session, teacher: User, student_id: UUID, course_id: UUID, limit: int, offset: int
+    db: Session,
+    teacher: User,
+    student_id: UUID,
+    course_id: UUID,
+    limit: int,
+    offset: int,
+    model: LoadedModel,
 ) -> list[PredictionResponse]:
     authorized_enrollment(db, teacher, student_id, course_id)
     rows = db.execute(
@@ -199,4 +231,80 @@ def list_predictions(
         .limit(limit)
         .offset(offset)
     )
-    return [response(row, snapshot, version) for row, snapshot, version in rows]
+    return [response(row, snapshot, version, model) for row, snapshot, version in rows]
+
+
+# Features a teacher may explore in the what-if simulator, with safe ranges.
+# These are the model's own derived aggregates — the simulation perturbs the
+# model's inputs, never stored school data.
+SIMULATION_FEATURES: dict[str, tuple[float, float]] = {
+    "Attendance_Percent": (0, 100),
+    "Avg_Score": (0, 100),
+    "Assignment_Avg_Score": (0, 100),
+    "Quiz_Avg_Score": (0, 100),
+    "Late_Submissions": (0, 100),
+    "Study_Hours_Weekly": (0, 60),
+    "LMS_Active_Days": (0, 56),
+}
+
+
+def simulate_what_if(
+    db: Session, teacher: User, data: WhatIfRequest, model: LoadedModel
+) -> WhatIfResponse:
+    found = db.execute(
+        select(RiskPrediction, FeatureSnapshot)
+        .join(FeatureSnapshot, FeatureSnapshot.id == RiskPrediction.feature_snapshot_id)
+        .where(
+            RiskPrediction.school_id == teacher.school_id,
+            FeatureSnapshot.school_id == teacher.school_id,
+            RiskPrediction.id == data.prediction_id,
+        )
+    ).one_or_none()
+    if found is None:
+        raise APIError(404, "PREDICTION_NOT_FOUND", "Prediction not found.")
+    row, snapshot = found
+    authorized_enrollment(db, teacher, row.student_id, row.course_offering_id)
+    if (
+        snapshot.feature_version != model.metadata["feature_version"]
+        or set(snapshot.features.get("values", {})) != set(model.feature_names)
+    ):
+        raise APIError(
+            409,
+            "SNAPSHOT_INCOMPATIBLE",
+            "This insight was recorded for a different model feature contract.",
+        )
+    overrides: dict[str, float] = {}
+    for name, value in data.overrides.items():
+        if name not in SIMULATION_FEATURES:
+            raise APIError(
+                422,
+                "UNKNOWN_SIMULATION_FEATURE",
+                f"'{name}' cannot be simulated. Allowed: {', '.join(sorted(SIMULATION_FEATURES))}.",
+            )
+        low, high = SIMULATION_FEATURES[name]
+        if not low <= value <= high:
+            raise APIError(
+                422,
+                "SIMULATION_VALUE_OUT_OF_RANGE",
+                f"'{name}' must be between {low} and {high}.",
+            )
+        overrides[name] = float(value)
+    values = dict(snapshot.features["values"])
+    values.update(overrides)
+    try:
+        result = predict(model, values)
+    except (ValueError, TypeError) as exc:
+        raise APIError(
+            503, "INFERENCE_FAILED", "The model could not process the simulated observations."
+        ) from exc
+    return WhatIfResponse(
+        prediction_id=row.id,
+        baseline_probability=float(row.risk_probability),
+        baseline_support_level={"low": "doing_well", "medium": "watch", "high": "priority_support"}[
+            row.risk_level
+        ],
+        probability=result["risk_probability"],
+        support_level=result["support_level"],
+        delta=round(result["risk_probability"] - float(row.risk_probability), 6),
+        applied_overrides=overrides,
+    )

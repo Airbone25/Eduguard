@@ -18,7 +18,7 @@ Run the existing backend in another terminal from the repository root:
 
 ```powershell
 cd backend
-.\.venv312\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+.\start.ps1
 ```
 
 Use the backend's configured development database. Existing demo school code: `demo`; teacher email: `teacher@demo.edu`; administrator: `admin@demo.edu`; student: `student@demo.edu`. The development seed password is documented in the backend README. Data changes happen only through explicit form submissions; the frontend does not fabricate school measurements.

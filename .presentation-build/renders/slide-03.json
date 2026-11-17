@@ -1,0 +1,636 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ofy9wn61",
+    "id": "ofy9wn61",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F7F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/obq90bml",
+      "id": "6",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Problem statement and relevance",
+      "textPreview": "Problem statement and relevance",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Problem statement and relevance"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Problem statement and relevance",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#142C40",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Problem statement and relevance",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#142C40",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cza94vmx",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Schools need timely evidence and a responsible path to action",
+      "textPreview": "Schools need timely evidence and a responsible path to action",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Schools need timely evidence and a responsible path to action"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Schools need timely evidence and a responsible path to action",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Schools need timely evidence and a responsible path to action",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0jax03i",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/4vqpgvyl",
+      "id": "7",
+      "bbox": [
+        58,
+        190,
+        1164,
+        360
+      ],
+      "text": "Problem | EduGuard response\nLate, reactive intervention | Weekly monitoring and advisory support signals\nSnapshot grading | Temporal features over student history\nDisconnected academic records | Unified observation and intervention workflow\nPotential student stigmatization | Positive progress views with no risk labels",
+      "textPreview": "Problem | EduGuard response | Late, reactive intervention | Weekly monitoring and advisory support signals | Snapshot grading | Temporal ...",
+      "rows": 5,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            190,
+            420,
+            72
+          ],
+          "text": "Problem",
+          "textPreview": "Problem",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Problem",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Problem",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            478,
+            190,
+            744,
+            72
+          ],
+          "text": "EduGuard response",
+          "textPreview": "EduGuard response",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "EduGuard response",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "EduGuard response",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            262,
+            420,
+            72
+          ],
+          "text": "Late, reactive intervention",
+          "textPreview": "Late, reactive intervention",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Late, reactive intervention",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Late, reactive intervention",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            478,
+            262,
+            744,
+            72
+          ],
+          "text": "Weekly monitoring and advisory support signals",
+          "textPreview": "Weekly monitoring and advisory support signals",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Weekly monitoring and advisory support signals",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Weekly monitoring and advisory support signals",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            334,
+            420,
+            72
+          ],
+          "text": "Snapshot grading",
+          "textPreview": "Snapshot grading",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Snapshot grading",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Snapshot grading",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            478,
+            334,
+            744,
+            72
+          ],
+          "text": "Temporal features over student history",
+          "textPreview": "Temporal features over student history",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Temporal features over student history",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Temporal features over student history",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            406,
+            420,
+            72
+          ],
+          "text": "Disconnected academic records",
+          "textPreview": "Disconnected academic records",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Disconnected academic records",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Disconnected academic records",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            478,
+            406,
+            744,
+            72
+          ],
+          "text": "Unified observation and intervention workflow",
+          "textPreview": "Unified observation and intervention workflow",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Unified observation and intervention workflow",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Unified observation and intervention workflow",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            58,
+            478,
+            420,
+            72
+          ],
+          "text": "Potential student stigmatization",
+          "textPreview": "Potential student stigmatization",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Potential student stigmatization",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Potential student stigmatization",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            478,
+            478,
+            744,
+            72
+          ],
+          "text": "Positive progress views with no risk labels",
+          "textPreview": "Positive progress views with no risk labels",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Positive progress views with no risk labels",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Positive progress views with no risk labels",
+                  "fontSize": 25,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ah8rqlg",
+      "id": "5",
+      "bbox": [
+        63,
+        593,
+        1150,
+        60
+      ],
+      "geometry": "rect",
+      "text": "Project contribution: connect detection, explanation and a recorded educator response.",
+      "textPreview": "Project contribution: connect detection, explanation and a recorded educator response.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• Project contribution: connect detection, explanation and a recorded educator response."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Project contribution: connect detection, explanation and a recorded educator response.",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Project contribution: connect detection, explanation and a recorded educator response.",
+              "fontSize": 26,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

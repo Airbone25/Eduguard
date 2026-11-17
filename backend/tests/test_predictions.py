@@ -1,4 +1,6 @@
+import json
 from datetime import date, timedelta
+from pathlib import Path
 from uuid import UUID
 
 from fastapi.testclient import TestClient
@@ -14,6 +16,12 @@ from app.models import (
     User,
     WeeklyRecord,
 )
+
+EXPECTED_MODEL_VERSION = json.loads(
+    (Path(__file__).resolve().parents[1] / "artifacts" / "model_metadata.json").read_text(
+        encoding="utf-8"
+    )
+)["model_version"]
 
 
 def add_history(db, school_id):
@@ -51,7 +59,7 @@ def test_predictions_persist_and_future_records_do_not_change_snapshot(
     first = client.post(path, headers=headers, json=body)
     assert first.status_code == 201, first.text
     result = first.json()
-    assert result["model_version"] == "current-joblib-v1"
+    assert result["model_version"] == EXPECTED_MODEL_VERSION
     assert result["signals"] and result["recommendations"]
     snapshot = db.get(FeatureSnapshot, UUID(result["feature_snapshot_id"]))
     original = snapshot.features.copy()

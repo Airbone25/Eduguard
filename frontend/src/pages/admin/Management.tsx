@@ -74,7 +74,6 @@ export default function Management({ kind }: { kind: EntityKind }) {
   return (
     <>
       <PageHeader
-        eyebrow="School management"
         title={kind[0].toUpperCase() + kind.slice(1)}
         description="Keep your school information current. Existing learning history is preserved."
       >

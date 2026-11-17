@@ -53,7 +53,6 @@ export default function WeeklyEntry() {
         ← Back to class
       </Link>
       <PageHeader
-        eyebrow="Weekly school records"
         title="A week of learning"
         description="Enter the school information you already know. Blank means unknown; zero means measured zero."
       />

@@ -33,7 +33,6 @@ export default function Support({ goals = false }: { goals?: boolean }) {
   return (
     <>
       <PageHeader
-        eyebrow={goals ? "Your next steps" : "People in your corner"}
         title={goals ? "A little progress, every week." : "Your support plans."}
         description={
           goals

@@ -1,0 +1,24 @@
+erDiagram
+    schools ||..o{ users : has
+    schools ||..o{ classrooms : has
+    schools ||..o{ subjects : offers
+    users ||..o| teacher_profiles : teacher_account
+    users ||..o| student_profiles : student_account
+    classrooms ||..o{ course_offerings : contains
+    subjects ||..o{ course_offerings : taught_as
+    teacher_profiles ||..o{ course_teachers : assigned_through
+    course_offerings ||..o{ course_teachers : has_teachers
+    student_profiles ||..o{ enrollments : joins_through
+    course_offerings ||..o{ enrollments : has_students
+    enrollments ||..o{ weekly_records : has_weekly_observations
+    student_profiles ||..o{ feature_snapshots : has_feature_history
+    feature_snapshots |o..o{ risk_predictions : referenced_by
+    model_versions ||..o{ risk_predictions : model_used
+    student_profiles ||..o{ risk_predictions : assessed_for
+    risk_predictions |o..o{ interventions : may_inform
+    student_profiles ||..o{ interventions : receives_support
+    intervention_templates |o..o{ interventions : may_use
+    interventions ||..o{ intervention_updates : has_timeline
+    users ||..o{ refresh_tokens : has_sessions
+    users |o..o{ audit_logs : may_be_actor
+    users ||..o{ import_jobs : uploads

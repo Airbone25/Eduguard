@@ -31,6 +31,47 @@ class Recommendation(BaseModel):
     reason: str
 
 
+class FeatureContribution(BaseModel):
+    name: str
+    value: float | None
+    contribution: float
+
+
+class WhatIfRequest(StrictInput):
+    prediction_id: UUID
+    overrides: dict[str, float]
+
+
+class WhatIfResponse(BaseModel):
+    prediction_id: UUID
+    baseline_probability: float
+    baseline_support_level: Literal["doing_well", "watch", "priority_support"]
+    probability: float
+    support_level: Literal["doing_well", "watch", "priority_support"]
+    delta: float
+    applied_overrides: dict[str, float]
+
+
+class ForecastPoint(BaseModel):
+    week_start: date
+    horizon: int = Field(ge=1, le=52)
+    risk_probability: float
+    band_low: float
+    band_high: float
+
+
+class ForecastResponse(BaseModel):
+    student_id: UUID
+    course_offering_id: UUID
+    as_of_date: date
+    history_weeks: int
+    horizon_weeks: int
+    band_level: float
+    model_version: str
+    method: str
+    points: list[ForecastPoint]
+
+
 class PredictionResponse(BaseModel):
     id: UUID
     student_id: UUID
@@ -47,3 +88,4 @@ class PredictionResponse(BaseModel):
     support_level: Literal["doing_well", "watch", "priority_support"]
     signals: list[Signal]
     recommendations: list[Recommendation]
+    contributions: list[FeatureContribution]

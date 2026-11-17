@@ -1,0 +1,783 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/udsvah03",
+    "id": "udsvah03",
+    "slide": 9,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#142C40",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ofq5svm5",
+      "id": "7",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Ethical AI and privacy by design",
+      "textPreview": "Ethical AI and privacy by design",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ethical AI and privacy by design"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Ethical AI and privacy by design",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Ethical AI and privacy by design",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfmhgne",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Role-specific information supports care without exposing predictive labels",
+      "textPreview": "Role-specific information supports care without exposing predictive labels",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Role-specific information supports care without exposing predictive labels"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Role-specific information supports care without exposing predictive labels",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#CDEBE5"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Role-specific information supports care without exposing predictive labels",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#CDEBE5"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0b65obm9",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "09",
+      "textPreview": "09",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "09"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "09",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#CDEBE5"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "09",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#CDEBE5"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/29wzel8z",
+      "id": "8",
+      "bbox": [
+        58,
+        184,
+        1164,
+        278
+      ],
+      "text": "Role | Permitted view | Privacy boundary\nAdmin | School configuration and user management | School-scoped administrative access\nTeacher | Risk bands, measured signals, intervention timeline | Assigned students and authorized courses\nStudent | Own progress, streaks and visible support actions | No risk probability, label or private notes",
+      "textPreview": "Role | Permitted view | Privacy boundary | Admin | School configuration and user management | School-scoped administrative access | Teach...",
+      "rows": 4,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            184,
+            170,
+            69.5
+          ],
+          "text": "Role",
+          "textPreview": "Role",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Role",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Role",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            228,
+            184,
+            524,
+            69.5
+          ],
+          "text": "Permitted view",
+          "textPreview": "Permitted view",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Permitted view",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Permitted view",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            752,
+            184,
+            470,
+            69.5
+          ],
+          "text": "Privacy boundary",
+          "textPreview": "Privacy boundary",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Privacy boundary",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Privacy boundary",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            253.5,
+            170,
+            69.5
+          ],
+          "text": "Admin",
+          "textPreview": "Admin",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Admin",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Admin",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            228,
+            253.5,
+            524,
+            69.5
+          ],
+          "text": "School configuration and user management",
+          "textPreview": "School configuration and user management",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "School configuration and user management",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "School configuration and user management",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            752,
+            253.5,
+            470,
+            69.5
+          ],
+          "text": "School-scoped administrative access",
+          "textPreview": "School-scoped administrative access",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "School-scoped administrative access",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "School-scoped administrative access",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            323,
+            170,
+            69.5
+          ],
+          "text": "Teacher",
+          "textPreview": "Teacher",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Teacher",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Teacher",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            228,
+            323,
+            524,
+            69.5
+          ],
+          "text": "Risk bands, measured signals, intervention timeline",
+          "textPreview": "Risk bands, measured signals, intervention timeline",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Risk bands, measured signals, intervention timeline",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Risk bands, measured signals, intervention timeline",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            752,
+            323,
+            470,
+            69.5
+          ],
+          "text": "Assigned students and authorized courses",
+          "textPreview": "Assigned students and authorized courses",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Assigned students and authorized courses",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Assigned students and authorized courses",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            392.5,
+            170,
+            69.5
+          ],
+          "text": "Student",
+          "textPreview": "Student",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Student",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Student",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            228,
+            392.5,
+            524,
+            69.5
+          ],
+          "text": "Own progress, streaks and visible support actions",
+          "textPreview": "Own progress, streaks and visible support actions",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Own progress, streaks and visible support actions",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Own progress, streaks and visible support actions",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            752,
+            392.5,
+            470,
+            69.5
+          ],
+          "text": "No risk probability, label or private notes",
+          "textPreview": "No risk probability, label or private notes",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "No risk probability, label or private notes",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "No risk probability, label or private notes",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mdonql4z",
+      "id": "5",
+      "bbox": [
+        63,
+        497,
+        1146,
+        91
+      ],
+      "geometry": "rect",
+      "text": "Teacher judgment governs the response. A risk band never determines discipline.\nRestrict identity and leakage-prone features in the model contract.",
+      "textPreview": "Teacher judgment governs the response. A risk band never determines discipline. | Restrict identity and leakage-prone features in the mod...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• Teacher judgment governs the response. A risk band never determines discipline."
+          },
+          {
+            "index": 2,
+            "text": "• Restrict identity and leakage-prone features in the model contract."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Teacher judgment governs the response. A risk band never determines discipline.",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Calibri",
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Teacher judgment governs the response. A risk band never determines discipline.",
+              "fontSize": 25,
+              "typeface": "Calibri",
+              "color": "#FFFFFF"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Restrict identity and leakage-prone features in the model contract.",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Calibri",
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Restrict identity and leakage-prone features in the model contract.",
+              "fontSize": 25,
+              "typeface": "Calibri",
+              "color": "#FFFFFF"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gzml0nq",
+      "id": "6",
+      "bbox": [
+        64,
+        625,
+        1135,
+        42
+      ],
+      "geometry": "rect",
+      "text": "Remaining evaluation: calibration, subgroup errors and the effects of interventions",
+      "textPreview": "Remaining evaluation: calibration, subgroup errors and the effects of interventions",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Remaining evaluation: calibration, subgroup errors and the effects of interventions"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Remaining evaluation: calibration, subgroup errors and the effects of interventions",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#CDEBE5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Remaining evaluation: calibration, subgroup errors and the effects of interventions",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#CDEBE5",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

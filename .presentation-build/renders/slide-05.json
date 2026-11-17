@@ -1,0 +1,1042 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/i107q5of",
+    "id": "i107q5of",
+    "slide": 5,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F7F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w32dkbuh",
+      "id": "10",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Requirements and literature survey",
+      "textPreview": "Requirements and literature survey",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Requirements and literature survey"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Requirements and literature survey",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#142C40",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Requirements and literature survey",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#142C40",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgbulwnm",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Selected EWS and EDM research informs the system requirements",
+      "textPreview": "Selected EWS and EDM research informs the system requirements",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Selected EWS and EDM research informs the system requirements"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Selected EWS and EDM research informs the system requirements",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Selected EWS and EDM research informs the system requirements",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cf2tcr61",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "05",
+      "textPreview": "05",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "05"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "05",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "05",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/epo7qtoj",
+      "id": "11",
+      "bbox": [
+        58,
+        181,
+        1164,
+        307
+      ],
+      "text": "Dimension | Selected EWS / EDM literature | EduGuard implementation\nLongitudinal tracking | Established in early-warning research¹ | Weekly records and 40 temporal features\nMulti-tenancy | Not established by these research sources | Composite school_id relationships\nClosed-loop support | Identification + intervention emphasized¹ | Creation, timeline and progress review\nPrivacy-first student view | Ethical concern in learning analytics² | Risk-free student response schemas",
+      "textPreview": "Dimension | Selected EWS / EDM literature | EduGuard implementation | Longitudinal tracking | Established in early-warning research¹ | We...",
+      "rows": 5,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            181,
+            235,
+            61.4
+          ],
+          "text": "Dimension",
+          "textPreview": "Dimension",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Dimension",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Dimension",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            293,
+            181,
+            448,
+            61.4
+          ],
+          "text": "Selected EWS / EDM literature",
+          "textPreview": "Selected EWS / EDM literature",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Selected EWS / EDM literature",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Selected EWS / EDM literature",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            741,
+            181,
+            481,
+            61.4
+          ],
+          "text": "EduGuard implementation",
+          "textPreview": "EduGuard implementation",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "EduGuard implementation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "EduGuard implementation",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            242.4,
+            235,
+            61.4
+          ],
+          "text": "Longitudinal tracking",
+          "textPreview": "Longitudinal tracking",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Longitudinal tracking",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Longitudinal tracking",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            293,
+            242.4,
+            448,
+            61.4
+          ],
+          "text": "Established in early-warning research¹",
+          "textPreview": "Established in early-warning research¹",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Established in early-warning research¹",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Established in early-warning research¹",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            741,
+            242.4,
+            481,
+            61.4
+          ],
+          "text": "Weekly records and 40 temporal features",
+          "textPreview": "Weekly records and 40 temporal features",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Weekly records and 40 temporal features",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Weekly records and 40 temporal features",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            303.8,
+            235,
+            61.4
+          ],
+          "text": "Multi-tenancy",
+          "textPreview": "Multi-tenancy",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Multi-tenancy",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Multi-tenancy",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            293,
+            303.8,
+            448,
+            61.4
+          ],
+          "text": "Not established by these research sources",
+          "textPreview": "Not established by these research sources",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Not established by these research sources",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Not established by these research sources",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            741,
+            303.8,
+            481,
+            61.4
+          ],
+          "text": "Composite school_id relationships",
+          "textPreview": "Composite school_id relationships",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Composite school_id relationships",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Composite school_id relationships",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            365.2,
+            235,
+            61.4
+          ],
+          "text": "Closed-loop support",
+          "textPreview": "Closed-loop support",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Closed-loop support",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Closed-loop support",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            293,
+            365.2,
+            448,
+            61.4
+          ],
+          "text": "Identification + intervention emphasized¹",
+          "textPreview": "Identification + intervention emphasized¹",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Identification + intervention emphasized¹",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Identification + intervention emphasized¹",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            741,
+            365.2,
+            481,
+            61.4
+          ],
+          "text": "Creation, timeline and progress review",
+          "textPreview": "Creation, timeline and progress review",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Creation, timeline and progress review",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Creation, timeline and progress review",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            58,
+            426.6,
+            235,
+            61.4
+          ],
+          "text": "Privacy-first student view",
+          "textPreview": "Privacy-first student view",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Privacy-first student view",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Privacy-first student view",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            293,
+            426.6,
+            448,
+            61.4
+          ],
+          "text": "Ethical concern in learning analytics²",
+          "textPreview": "Ethical concern in learning analytics²",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Ethical concern in learning analytics²",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Ethical concern in learning analytics²",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            741,
+            426.6,
+            481,
+            61.4
+          ],
+          "text": "Risk-free student response schemas",
+          "textPreview": "Risk-free student response schemas",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Risk-free student response schemas",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Risk-free student response schemas",
+                  "fontSize": 21,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhkbe1o7",
+      "id": "5",
+      "bbox": [
+        60,
+        512,
+        545,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Functional requirements",
+      "textPreview": "Functional requirements",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Functional requirements"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Functional requirements",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Calibri",
+            "color": "#007F79",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Functional requirements",
+              "fontSize": 26,
+              "typeface": "Calibri",
+              "color": "#007F79",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l4bupwny",
+      "id": "6",
+      "bbox": [
+        657,
+        512,
+        560,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Non-functional requirements",
+      "textPreview": "Non-functional requirements",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Non-functional requirements"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Non-functional requirements",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Calibri",
+            "color": "#007F79",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Non-functional requirements",
+              "fontSize": 26,
+              "typeface": "Calibri",
+              "color": "#007F79",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/032tgr6d",
+      "id": "7",
+      "bbox": [
+        65,
+        556,
+        539,
+        84
+      ],
+      "geometry": "rect",
+      "text": "ingest weekly records, predict, explain and track interventions.",
+      "textPreview": "ingest weekly records, predict, explain and track interventions.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• ingest weekly records, predict, explain and track"
+          },
+          {
+            "index": 2,
+            "text": "interventions."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ingest weekly records, predict, explain and track interventions.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ingest weekly records, predict, explain and track interventions.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n6dcr65o",
+      "id": "8",
+      "bbox": [
+        661,
+        556,
+        542,
+        84
+      ],
+      "geometry": "rect",
+      "text": "tenant isolation, role privacy, repeatability, responsiveness and testability.",
+      "textPreview": "tenant isolation, role privacy, repeatability, responsiveness and testability.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• tenant isolation, role privacy, repeatability,"
+          },
+          {
+            "index": 2,
+            "text": "responsiveness and testability."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "tenant isolation, role privacy, repeatability, responsiveness and testability.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "tenant isolation, role privacy, repeatability, responsiveness and testability.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5kbi1oj",
+      "id": "9",
+      "bbox": [
+        60,
+        663,
+        1100,
+        26
+      ],
+      "geometry": "rect",
+      "text": "¹ Balfanz et al. (2007)    ² Slade & Prinsloo (2013). Comparison concerns the cited research scope.",
+      "textPreview": "¹ Balfanz et al. (2007)    ² Slade & Prinsloo (2013). Comparison concerns the cited research scope.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "¹ Balfanz et al. (2007)    ² Slade & Prinsloo (2013). Comparison concerns the cited research scope."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "¹ Balfanz et al. (2007)    ² Slade & Prinsloo (2013). Comparison concerns the cited research scope.",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "¹ Balfanz et al. (2007)    ² Slade & Prinsloo (2013). Comparison concerns the cited research scope.",
+              "fontSize": 16,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

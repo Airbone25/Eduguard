@@ -22,7 +22,6 @@ export default function Interventions() {
   return (
     <>
       <PageHeader
-        eyebrow="Thoughtful follow-through"
         title="Support plans"
         description="Review upcoming check-ins and keep support moving forward."
       />

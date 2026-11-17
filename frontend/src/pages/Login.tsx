@@ -53,40 +53,36 @@ export default function Login() {
       <section className="auth-story">
         <Brand />
         <div className="story-content">
-          <span className="story-kicker">
-            A little support. A lasting difference.
-          </span>
           <h1>
-            See the progress.
+            See the signal.
             <br />
-            Support the potential.
+            Know the reason.
           </h1>
           <p>
-            A clearer picture of every student’s journey, so the right support
-            arrives at the right time.
+            EduGuard turns weekly observations into explained risk trajectories,
+            then leaves the decision where it belongs — with you.
           </p>
           <div className="story-steps">
             <div>
               <BookOpen />
-              <span>Understand learning</span>
+              <span>Raw records in, no manual features</span>
             </div>
             <div>
               <TrendingUp />
-              <span>Notice what’s changing</span>
+              <span>Exact contributions behind every signal</span>
             </div>
             <div>
               <HeartHandshake />
-              <span>Make a meaningful difference</span>
+              <span>Teacher-only, never shown to students</span>
             </div>
           </div>
         </div>
         <p className="story-footer">
-          Built around students. Guided by teachers.
+          Advisory by design. Governed by evidence.
         </p>
       </section>
       <main className="auth-main">
         <div className="login-card">
-          <p className="eyebrow">Your school. Connected.</p>
           <h2>Welcome back</h2>
           <p className="login-intro">Sign in to your EduGuard workspace.</p>
           {logoutWarning && (
@@ -199,7 +195,7 @@ export default function Login() {
             <strong>Contact your school administrator.</strong>
           </p>
         </div>
-        <p className="auth-footer">A thoughtful approach to student support.</p>
+        <p className="auth-footer">Insights inform. Teachers decide.</p>
       </main>
     </div>
   );

@@ -32,7 +32,6 @@ export default function AdminDashboard() {
   return (
     <>
       <PageHeader
-        eyebrow="School administration"
         title="A school ready to grow."
         description="Manage your people, learning spaces, and weekly information."
       />

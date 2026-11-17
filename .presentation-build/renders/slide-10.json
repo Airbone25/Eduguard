@@ -1,0 +1,869 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/m90b6t0r",
+    "id": "m90b6t0r",
+    "slide": 10,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F6F7F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l036l83y",
+      "id": "6",
+      "bbox": [
+        56,
+        38,
+        1168,
+        65
+      ],
+      "geometry": "rect",
+      "text": "Progress of project work",
+      "textPreview": "Progress of project work",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Progress of project work"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Progress of project work",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Calibri",
+            "color": "#142C40",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Progress of project work",
+              "fontSize": 42,
+              "typeface": "Calibri",
+              "color": "#142C40",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xc3mho32",
+      "id": "2",
+      "bbox": [
+        58,
+        108,
+        1160,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Current status reported in the project brief",
+      "textPreview": "Current status reported in the project brief",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Current status reported in the project brief"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Current status reported in the project brief",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Current status reported in the project brief",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbu58j2h",
+      "id": "3",
+      "bbox": [
+        1180,
+        672,
+        44,
+        25
+      ],
+      "geometry": "rect",
+      "text": "10",
+      "textPreview": "10",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Calibri",
+            "color": "#506372"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10",
+              "fontSize": 17,
+              "typeface": "Calibri",
+              "color": "#506372"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/9k7u5sni",
+      "id": "7",
+      "bbox": [
+        58,
+        187,
+        1164,
+        344
+      ],
+      "text": "Workstream | Completed scope | Reported evidence\nBackend | M1–M15 | 60 REST endpoints across 11 modules\n130 PostgreSQL integration tests passing\nFrontend | M1–M16 and M19 | Admin, Teacher and Student portals\n47 Vitest / MSW test suites passing\nDatabase | Schema evolution | 9 linear Alembic migrations\nData / ML | Temporal inference pipeline | 40 temporal features\nChecksum and threshold validation",
+      "textPreview": "Workstream | Completed scope | Reported evidence | Backend | M1–M15 | 60 REST endpoints across 11 modules | 130 PostgreSQL integration te...",
+      "rows": 5,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            58,
+            187,
+            221,
+            68.8
+          ],
+          "text": "Workstream",
+          "textPreview": "Workstream",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Workstream",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Workstream",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            279,
+            187,
+            360,
+            68.8
+          ],
+          "text": "Completed scope",
+          "textPreview": "Completed scope",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Completed scope",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Completed scope",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            639,
+            187,
+            583,
+            68.8
+          ],
+          "text": "Reported evidence",
+          "textPreview": "Reported evidence",
+          "fillColor": "#142C40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Reported evidence",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Reported evidence",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            58,
+            255.8,
+            221,
+            68.8
+          ],
+          "text": "Backend",
+          "textPreview": "Backend",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Backend",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Backend",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            279,
+            255.8,
+            360,
+            68.8
+          ],
+          "text": "M1–M15",
+          "textPreview": "M1–M15",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "M1–M15",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "M1–M15",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            639,
+            255.8,
+            583,
+            68.8
+          ],
+          "text": "60 REST endpoints across 11 modules\n130 PostgreSQL integration tests passing",
+          "textPreview": "60 REST endpoints across 11 modules | 130 PostgreSQL integration tests passing",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "60 REST endpoints across 11 modules",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "60 REST endpoints across 11 modules",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "130 PostgreSQL integration tests passing",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "130 PostgreSQL integration tests passing",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            58,
+            324.6,
+            221,
+            68.8
+          ],
+          "text": "Frontend",
+          "textPreview": "Frontend",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Frontend",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Frontend",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            279,
+            324.6,
+            360,
+            68.8
+          ],
+          "text": "M1–M16 and M19",
+          "textPreview": "M1–M16 and M19",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "M1–M16 and M19",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "M1–M16 and M19",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            639,
+            324.6,
+            583,
+            68.8
+          ],
+          "text": "Admin, Teacher and Student portals\n47 Vitest / MSW test suites passing",
+          "textPreview": "Admin, Teacher and Student portals | 47 Vitest / MSW test suites passing",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Admin, Teacher and Student portals",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Admin, Teacher and Student portals",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "47 Vitest / MSW test suites passing",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "47 Vitest / MSW test suites passing",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            58,
+            393.4,
+            221,
+            68.8
+          ],
+          "text": "Database",
+          "textPreview": "Database",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Database",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Database",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            279,
+            393.4,
+            360,
+            68.8
+          ],
+          "text": "Schema evolution",
+          "textPreview": "Schema evolution",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Schema evolution",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Schema evolution",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            639,
+            393.4,
+            583,
+            68.8
+          ],
+          "text": "9 linear Alembic migrations",
+          "textPreview": "9 linear Alembic migrations",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9 linear Alembic migrations",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9 linear Alembic migrations",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            58,
+            462.2,
+            221,
+            68.8
+          ],
+          "text": "Data / ML",
+          "textPreview": "Data / ML",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Data / ML",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Data / ML",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            279,
+            462.2,
+            360,
+            68.8
+          ],
+          "text": "Temporal inference pipeline",
+          "textPreview": "Temporal inference pipeline",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Temporal inference pipeline",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Temporal inference pipeline",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            639,
+            462.2,
+            583,
+            68.8
+          ],
+          "text": "40 temporal features\nChecksum and threshold validation",
+          "textPreview": "40 temporal features | Checksum and threshold validation",
+          "fillColor": "#EDF3F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "40 temporal features",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "40 temporal features",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Checksum and threshold validation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Checksum and threshold validation",
+                  "fontSize": 24,
+                  "typeface": "Calibri",
+                  "color": "#142C40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ydcnatkn",
+      "id": "5",
+      "bbox": [
+        63,
+        570,
+        1142,
+        110
+      ],
+      "geometry": "rect",
+      "text": "Responsive Admin, Teacher and Student portals are complete.\nModel verification includes checksum and threshold validation.\nPassing software tests do not establish predictive accuracy or intervention effectiveness.",
+      "textPreview": "Responsive Admin, Teacher and Student portals are complete. | Model verification includes checksum and threshold validation. | Passing so...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• Responsive Admin, Teacher and Student portals are complete."
+          },
+          {
+            "index": 2,
+            "text": "• Model verification includes checksum and threshold validation."
+          },
+          {
+            "index": 3,
+            "text": "• Passing software tests do not establish predictive accuracy or intervention effectiveness."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Responsive Admin, Teacher and Student portals are complete.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Responsive Admin, Teacher and Student portals are complete.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Model verification includes checksum and threshold validation.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Model verification includes checksum and threshold validation.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "Passing software tests do not establish predictive accuracy or intervention effectiveness.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Calibri",
+            "color": "#142C40"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Passing software tests do not establish predictive accuracy or intervention effectiveness.",
+              "fontSize": 23,
+              "typeface": "Calibri",
+              "color": "#142C40"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

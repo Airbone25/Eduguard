@@ -11,9 +11,9 @@ from app.schemas.weekly_record import WeeklyData
 from app.services.weekly_record_service import authorized_enrollment
 
 
-def build_student_features(
+def student_history_rows(
     db: Session, teacher: User, student_id: UUID, course_id: UUID, as_of_date: date
-) -> FeatureResult:
+) -> list[dict]:
     authorized_enrollment(db, teacher, student_id, course_id)
     anchor = as_of_date - timedelta(days=as_of_date.weekday())
     rows = db.scalars(
@@ -29,10 +29,16 @@ def build_student_features(
     ).all()
     # Explicit whitelist excludes identity, free text and target-derived fields.
     numeric = set(WeeklyData.model_fields) - {"student_checkin_text"}
+    return [
+        {"week_start": row.week_start, **{key: getattr(row, key) for key in numeric}}
+        for row in rows
+    ]
+
+
+def build_student_features(
+    db: Session, teacher: User, student_id: UUID, course_id: UUID, as_of_date: date
+) -> FeatureResult:
     return build_features(
-        [
-            {"week_start": row.week_start, **{key: getattr(row, key) for key in numeric}}
-            for row in rows
-        ],
+        student_history_rows(db, teacher, student_id, course_id, as_of_date),
         as_of_date,
     )

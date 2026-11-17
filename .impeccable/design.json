@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T00:00:00Z",
+  "title": "Design System: EduGuard — The Signal Index",
+  "extensions": {
+    "colorMeta": {
+      "stock": { "role": "neutral", "displayName": "Catalogue Stock", "canonical": "#f7f5ef" },
+      "card": { "role": "neutral", "displayName": "Card White", "canonical": "#fffdf7" },
+      "drawer": { "role": "neutral", "displayName": "Drawer", "canonical": "#f2efe6" },
+      "rail": { "role": "neutral", "displayName": "Rail Ink", "canonical": "#23271f" },
+      "rail-raised": { "role": "neutral", "displayName": "Rail Raised", "canonical": "#2e332a" },
+      "rail-line": { "role": "neutral", "displayName": "Rail Line", "canonical": "#3a3f37" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#20241f" },
+      "ink-2": { "role": "neutral", "displayName": "Ink Secondary", "canonical": "#52574d" },
+      "ink-3": { "role": "neutral", "displayName": "Ink Tertiary", "canonical": "#74796e" },
+      "rule": { "role": "neutral", "displayName": "Hairline Rule", "canonical": "#ded9cd" },
+      "rule-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "#c9c3b3" },
+      "stamp": { "role": "primary", "displayName": "Vermilion Stamp", "canonical": "#b23a2b" },
+      "stamp-deep": { "role": "primary", "displayName": "Vermilion Pressed", "canonical": "#8d2c20" },
+      "stamp-wash": { "role": "primary", "displayName": "Stamp Wash", "canonical": "#f9ece6" },
+      "ochre": { "role": "secondary", "displayName": "Ochre Watch", "canonical": "#8f6a16" },
+      "ochre-wash": { "role": "secondary", "displayName": "Ochre Wash", "canonical": "#f8f1de" },
+      "sage": { "role": "secondary", "displayName": "Sage Improving", "canonical": "#3e6b4f" },
+      "sage-wash": { "role": "secondary", "displayName": "Sage Wash", "canonical": "#eaf2e8" },
+      "critical": { "role": "secondary", "displayName": "Critical", "canonical": "#a6281c" },
+      "critical-wash": { "role": "secondary", "displayName": "Critical Wash", "canonical": "#fbe9e5" },
+      "neutral-wash": { "role": "neutral", "displayName": "Neutral Wash", "canonical": "#eeece4" },
+      "chart-ink": { "role": "data", "displayName": "Chart Ink", "canonical": "#20241f" },
+      "chart-ochre": { "role": "data", "displayName": "Chart Forecast", "canonical": "#a3672a" },
+      "chart-grid": { "role": "data", "displayName": "Chart Grid", "canonical": "#e7e2d6" },
+      "focus": { "role": "secondary", "displayName": "Focus", "canonical": "#8f6a16" },
+      "call-number": { "role": "neutral", "displayName": "Call Number", "canonical": "#6f7468" },
+      "plate": { "role": "neutral", "displayName": "Plate", "canonical": "#e8e2cf" },
+      "plate-ink": { "role": "neutral", "displayName": "Plate Ink", "canonical": "#6b6450" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page h1; 30px/650, tight tracking." },
+      "hero": { "displayName": "Hero", "purpose": "Login story headline on rail ink." },
+      "metric": { "displayName": "Metric", "purpose": "34px tabular numerals for indexed counts." },
+      "title": { "displayName": "Title", "purpose": "Panel and card headings; 16–18px/750." },
+      "body": { "displayName": "Body", "purpose": "12–14px working copy at comfortable leading." },
+      "small": { "displayName": "Small", "purpose": "Tabular tables, labels and call numbers; never below 11px for functional text." },
+      "label": { "displayName": "Label", "purpose": "Stamped uppercase classification labels; tracking, never a kicker above a heading." },
+      "mono": { "role": "neutral", "displayName": "Mono", "purpose": "Roll and call numbers only." }
+    },
+    "shadows": [
+      { "name": "sheet-edge", "value": "14px 0 40px #20241f40", "purpose": "Mobile drawer edge; the only deep shadow." }
+    ],
+    "motion": [
+      { "name": "slip-open", "value": "180ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Pull-slip reveal; one authored motion moment." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Kill switch for all animation." }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "600px" },
+      { "name": "mobile", "value": "767px" },
+      { "name": "tablet", "value": "1024px" },
+      { "name": "narrow", "value": "1280px" },
+      { "name": "wide", "value": "1600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Vermilion stamp fill with card-white text; the single assertive control.",
+      "html": "<button class='button button-primary'>Open the index</button>",
+      "css": ".button-primary { background: #b23a2b; color: #fffdf7; } .button-primary:hover:not(:disabled) { background: #8d2c20; }"
+    },
+    {
+      "name": "Index Card",
+      "kind": "card",
+      "refersTo": "alert-card",
+      "description": "A ruled catalogue card: paper ground, hairline frame, classification tab, tabular risk line.",
+      "html": "<article class='alert-card'><span class='card-tab'>Priority</span><h3>Riya Patel</h3><p class='alert-risk'>Risk 55% → 86%</p></article>",
+      "css": ".alert-card { border: 1px solid #ded9cd; border-radius: 5px; background: #fffdf7; } .alert-risk { font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Classification Tab",
+      "kind": "chip",
+      "refersTo": "card-tab",
+      "description": "Named disposition hanging from the card's top-right edge; never color alone.",
+      "html": "<span class='card-tab tab-priority_support'>Priority</span>",
+      "css": ".card-tab { position: absolute; top: -1px; right: 14px; border: 1px solid #c9c3b3; border-top: 0; border-radius: 0 0 3px 3px; background: #eeece4; font-size: 9px; font-weight: 700; letter-spacing: 0.9px; text-transform: uppercase; }"
+    },
+    {
+      "name": "Pull Slip",
+      "kind": "disclosure",
+      "refersTo": "pull-slip",
+      "description": "Native details/summary holding the evidence behind a pulled signal.",
+      "html": "<details class='pull-slip'><summary>Why this card was pulled</summary><div class='slip-body'>Evidence and suggested next step.</div></details>",
+      "css": ".pull-slip { border-top: 1px dashed #c9c3b3; } .pull-slip summary { color: #8f6a16; font-size: 10px; font-weight: 700; }"
+    },
+    {
+      "name": "Decision Band",
+      "kind": "banner",
+      "refersTo": "decision-band",
+      "description": "Sticky paper band with a vermilion tab marker, monumental count and jump action.",
+      "html": "<section class='decision-band'><span class='decision-icon'>Index</span><span class='decision-value'>07</span><a class='decision-action'>Open the index</a></section>",
+      "css": ".decision-band { background: #fffdf7; border-bottom: 1px solid #c9c3b3; } .decision-icon { background: #b23a2b; color: #fffdf7; text-transform: uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signal Index",
+    "overview": "EduGuard reads as a classified catalogue of advisory student signals on warm stock paper. Charcoal ink, hairline rules and 34px tabular numerals carry the data; one vermilion stamp marks every live decision, with ochre and sage as watch and improving tints. Each signal is an indexed card with a named classification tab and an evidence pull slip; governance is printed on the shell. Standard web controls only — the world contributes type, palette, density and one signature move, never a costume UI.",
+    "keyCharacteristics": [
+      "Warm catalogue stock and card white under charcoal ink, never cool blue slate.",
+      "One vermilion stamp for every live decision; ochre and sage stay secondary.",
+      "Hairline ruled lines instead of resting shadows.",
+      "34px tabular metric numerals and monospace call numbers.",
+      "Indexed cards with classification tabs and native evidence disclosures.",
+      "Charts use ink lines with a single ochre forecast line against a warm grid."
+    ],
+    "rules": [
+      { "name": "The Stamp Rule", "body": "Vermilion marks live decisions and focus only; it never becomes a full page field or decorative accent." },
+      { "name": "The Named Tab Rule", "body": "Every indexed card states its disposition in words on a tab; color is never the sole signal." },
+      { "name": "The Evidence Rule", "body": "Every pulled card opens a slip explaining the exact evidence and the teacher-owned next step." },
+      { "name": "The Hairline Rule", "body": "Resting surfaces are separated by 1px rules and washes, not shadows." },
+      { "name": "The No-Kicker Rule", "body": "Headings carry their own weight; no tracked micro-label sits above them." }
+    ],
+    "dos": [
+      "Do use 12px as the floor for functional text and tabular numerals for aligned values.",
+      "Do keep the vermilion focus stamp visible against paper ground with adequate contrast.",
+      "Do use the ochre forecast line and ink observed line in charts.",
+      "Do keep advisory, teacher-only governance visible in the shell and on evidence slips.",
+      "Do honor prefers-reduced-motion and keep the pull slip as the only authored motion moment."
+    ],
+    "donts": [
+      "Don't introduce kickers, side-tab accents, gradient text, glow shadows or generic icon tiles.",
+      "Don't render risk as a verdict or expose AI output in student-facing surfaces.",
+      "Don't invent data the model did not use; demo data stays visibly synthetic.",
+      "Don't turn the catalogue metaphor into navigation or bespoke controls.",
+      "Don't regress to the retired evergreen, airport-yellow or navy palettes."
+    ]
+  }
+}

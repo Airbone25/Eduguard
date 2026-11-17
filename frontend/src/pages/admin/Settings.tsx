@@ -51,7 +51,6 @@ export default function Settings() {
   return (
     <>
       <PageHeader
-        eyebrow="Administration"
         title="School settings"
         description="The details your school shares."
       />

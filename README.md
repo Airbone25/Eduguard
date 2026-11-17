@@ -1,9 +1,10 @@
 # EduGuard
 
 **Early-warning academic-risk platform for schools.** Teachers record weekly
-observations, a pretrained model turns a student's longitudinal record into a
-risk probability, and the system converts that signal into a trackable support
-plan — while keeping the underlying score strictly private from students.
+observations, a scikit-learn model retrained in this repository turns a
+student's longitudinal record into a risk probability, and the system converts
+that signal into a trackable support plan — while keeping the underlying score
+strictly private from students.
 
 EduGuard is a full-stack reference implementation built to a written
 specification. It ships a multi-tenant FastAPI backend and a React frontend,
@@ -40,8 +41,10 @@ and it is explicit about what the model can and cannot do.
    and attended, assessment averages, assignment counts, late submissions. No
    derived or ML features are ever accepted as input.
 3. **The backend derives 40 temporal features** from that history using pure
-   functions, and feeds them to a pretrained scikit-learn pipeline. Missing
-   values are filled only by the artifact's own fitted imputer.
+   functions, and feeds them to a scikit-learn pipeline retrained by
+   `backend/scripts/train_model.py` (the same feature builder that trains also
+   serves). Missing values are filled only by the artifact's own fitted
+   imputer.
 4. **A prediction is persisted** together with the exact ordered feature
    snapshot, the model version, probability and mapped support level.
 5. **The teacher gets an explanation and suggestions** derived only from that
@@ -146,8 +149,8 @@ request body is rejected.
 ├── 02_FRONTEND_IMPLEMENTATION_PLAN.md
 │
 ├── EduGuard_AI_Risk_Detection_Colab.ipynb
-│                                 the training notebook the artifact came from
-├── eduguard_risk_model.joblib   ⚠ UNTRACKED — supply it yourself
+│                                 original notebook, kept for provenance reference
+├── eduguard_risk_model.joblib   ⚠ UNTRACKED — retrain it (one command) or supply it
 ├── student_dataset_enriched.csv ⚠ UNTRACKED — supply it yourself
 │
 ├── backend/
@@ -198,9 +201,10 @@ request body is rejected.
   `engines` constraint in `package.json`).
 - **PostgreSQL 14+**, with permission for the target role to create schemas and
   install the `citext` extension.
-- **The model artifact.** `eduguard_risk_model.joblib` and
-  `student_dataset_enriched.csv` are deliberately **not** committed — see
-  [The model](#the-model).
+- **The model artifact.** `eduguard_risk_model.joblib` is not committed, but it
+  is reproducible: run the two training commands in [The model](#the-model).
+  `student_dataset_enriched.csv` (for provenance checks only) is still
+  supplied manually.
 
 ---
 
@@ -208,29 +212,59 @@ request body is rejected.
 
 ### 1. Backend
 
-```bash
-cd backend
+For this existing Windows checkout, start the backend with:
 
-python -m venv .venv312
-# Windows:  .venv312\Scripts\activate
-# POSIX:    source .venv312/bin/activate
-
-pip install -e ".[dev]"
-
-cp .env.example .env        # then edit DATABASE_URL and JWT_SECRET
+```powershell
+& .\backend\start.ps1
 ```
 
-Place `eduguard_risk_model.joblib` into `backend/artifacts/`. It is not in the
-repository.
+The launcher selects `.venv312` explicitly, checks Python 3.12 and imports, and
+starts the API. It works regardless of which environment your terminal has activated.
+Use `-CheckOnly` to check imports without starting the server. If it reports a Python
+version mismatch, follow [the environment repair instructions](backend/README.md#repair-a-python-version-mismatch-in-this-checkout).
+
+For a **fresh Windows installation**, install Python 3.12, then:
+
+```powershell
+cd backend
+py -3.12 -m venv .venv312
+.\.venv312\Scripts\python.exe -m pip install -e ".[dev]"
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+# Edit DATABASE_URL and JWT_SECRET for your installation.
+```
+
+Do not recreate an existing environment with unqualified `python -m venv`:
+your global Python may be 3.14, and the folder name does not select Python 3.12.
+On POSIX, use `python3.12 -m venv .venv312` and activate it with
+`source .venv312/bin/activate` before installing dependencies.
+
+The model artifact is reproducible rather than hand-supplied: from `backend/`,
+
+```powershell
+.\.venv312\Scripts\python.exe -m scripts.generate_synthetic_weekly
+.\.venv312\Scripts\python.exe -m scripts.train_model --overwrite
+```
+
+The first script synthesizes longitudinal weekly records for 800 demo students
+(1600 with `--students 1600`; 2–3 courses each, 14 weeks, five engagement
+personas with noisy observations). The second computes the production `weekly-v1`
+features from those raw rows, compares logistic regression, histogram gradient
+boosting and random forest with GroupKFold split by student, derives thresholds
+from out-of-fold probabilities, writes `backend/artifacts/eduguard_risk_model.joblib`
+plus its repo-root mirror, and verifies the result with the production loader —
+nothing needs to be copied manually.
 
 Apply migrations, seed demo data, then start the API:
 
-```bash
-python -m alembic upgrade head
-python scripts/seed_demo.py            # minimal: admin, teacher, one student
-python scripts/seed_frontend_demo.py   # richer: 3 students with history
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+```powershell
+.\.venv312\Scripts\python.exe -m alembic upgrade head
+.\.venv312\Scripts\python.exe -m scripts.seed_demo
+.\.venv312\Scripts\python.exe -m scripts.seed_frontend_demo
+.\start.ps1
 ```
+
+On POSIX, run the equivalent `python -m` commands from the activated Python 3.12
+environment, then `python -m uvicorn app.main:app --host 127.0.0.1 --port 8000`.
 
 Interactive API docs: <http://127.0.0.1:8000/docs>
 
@@ -294,8 +328,10 @@ predictions and interventions so every dashboard has populated states, come from
 | Management | `/admin/settings`, listing endpoints | school settings and searchable lists |
 | Teacher | `/teacher/*` | classes, roster, student detail, weekly records |
 | Dashboards | `/teacher/classes/{id}/risk-summary` | class risk summary, sortable and paginated |
+| Alert feed | `/teacher/alerts` | cross-course AI alert inbox: declining risk, unsupported at-risk students, new data, recoveries |
 | Weekly records | `/teacher/students/{id}/weekly-records*` | single-week PUT, list, batch POST |
 | Predictions | `/teacher/students/{id}/predictions`, `/teacher/classes/{id}/predictions` | run inference, list history |
+| Explainability | prediction `contributions`, `/teacher/predictions/what-if` | per-feature attributions, counterfactual simulator |
 | Interventions | `/teacher/.../interventions*` | create, list, read, update, timeline, complete |
 | Student | `/student/me/*` | dashboard, progress, visible interventions, goals |
 | Imports | `/admin/imports*` | CSV import for students and weekly records |
@@ -406,12 +442,21 @@ that the models and the schema agree.
 trained with scikit-learn 1.6.1. The artifact embeds all 40 feature names,
 their ordering, and the binary classes `[0, 1]`.
 `artifacts/model_metadata.json` records the version, checksum, thresholds,
-feature and adapter versions, and provenance — without inventing training
-metrics or a training date.
+feature and adapter versions, preprocessing step names, out-of-fold metrics,
+training date and provenance — and is the only model file tracked in git.
 
-**Nothing was retrained.** Milestone 8 of the plan (converting the notebook into
-a training script) was deliberately replaced by inspecting and integrating the
-supplied artifact.
+**The model is trained in this repository.** Milestone 8 is no longer a
+substitute: `backend/scripts/generate_synthetic_weekly.py` synthesizes
+longitudinal weekly records with known ground-truth labels, and
+`backend/scripts/train_model.py` recomputes the production `weekly-v1` features
+from those raw rows, compares logistic regression, histogram gradient boosting
+and random forest with GroupKFold split by student, and ships the winner
+(currently logistic regression: ROC-AUC 0.9999, PR-AUC 0.9998, Brier 0.0038 on
+out-of-fold predictions). Thresholds are derived from the winner's
+out-of-fold probabilities (`at_risk` = F2-optimal cut, watch/priority bands
+anchored to it) instead of being copied from the old notebook. Because
+features are computed by the same `app.ml.feature_builder` that serves the API,
+training and inference can never drift apart.
 
 The loader refuses to start on any of: checksum mismatch, scikit-learn version
 drift, an unfitted pipeline, wrong feature count or ordering, out-of-range
@@ -427,25 +472,27 @@ python scripts/inspect_model.py
 
 > ### Why the model and dataset are not in this repository
 >
-> `eduguard_risk_model.joblib` and `student_dataset_enriched.csv` are excluded
-> from version control by `.gitignore` (`*.joblib`, `*.csv`, `artifacts/*`).
-> Copy them into place before starting the API. The training notebook
-> (`EduGuard_AI_Risk_Detection_Colab.ipynb`) *is* tracked, so the provenance of
-> the artifact stays auditable without redistributing data.
+> `eduguard_risk_model.joblib` is excluded from version control
+> (`*.joblib`, `artifacts/*`) but reproducible with the two training commands
+> above; `model_metadata.json` — with its checksum, metrics and thresholds —
+> is tracked so every commit pins exactly which model was verified.
+> `student_dataset_enriched.csv` (used only for provenance checks against the
+> original notebook) is still supplied manually. The notebook
+> (`EduGuard_AI_Risk_Detection_Colab.ipynb`) *is* tracked for reference.
 
 ---
 
 ## Project status
 
-Backend milestones complete: **1–7, 9–15**. Milestone 8 was intentionally
-replaced by artifact integration.
+Backend milestones complete: **1–7, 9–15**. Milestone 8 is now implemented as a
+synthetic-data generator plus a real retraining pipeline.
 
 | MS | Scope | State |
 |---|---|---|
 | 1–3 | Bootstrap, data model, auth/RBAC | ✅ |
 | 4–5 | Admin APIs, teacher access model | ✅ |
 | 6–7 | Weekly records, feature engineering | ✅ |
-| 8 | Notebook → training script | ⏭ replaced by pretrained-artifact integration |
+| 8 | Notebook → training script | ✅ synthetic generator + retraining pipeline (`scripts/train_model.py`) |
 | 9–11 | Model registry/inference, explanations, recommendations | ✅ |
 | 12 | Intervention tracking | ✅ |
 | 13 | Teacher dashboard aggregation | ✅ |
@@ -473,10 +520,13 @@ Stated plainly, because a risk platform that overstates itself is worse than
 one that admits its edges.
 
 **ML validity**
-- The training notebook consumes a precomputed synthetic feature table and does
-  not define every generating formula. The integration verifies preprocessing
-  and feature ordering; it does **not** establish calibration or real-school
-  predictive validity.
+- The shipped model is trained on synthetic longitudinal data whose ground-truth
+  labels come from the same generator as the observations. Out-of-fold metrics
+  (ROC-AUC 0.9999) therefore bound the pipeline, not real-school performance.
+  The training corpus deliberately shares one feature builder with serving so
+  no train/serve skew is possible, but calibration and predictive validity on
+  real student data are **unproven** until the script is re-run on exported,
+  consented school records.
 - Weekly per-course averages and dispersion are documented *operational*
   mappings. Weekly score dispersion is not the same thing as cross-subject or
   individual-assessment dispersion.
@@ -527,6 +577,6 @@ one that admits its edges.
 
 ## License and attribution
 
-Internal academic project. The scikit-learn model artifact was produced by the
-training notebook in this repository; the dataset is synthetic and is not
-redistributed here.
+Internal academic project. The model artifact is retrained by
+`backend/scripts/train_model.py` on synthetic data generated in this repository;
+the dataset is not redistributed.

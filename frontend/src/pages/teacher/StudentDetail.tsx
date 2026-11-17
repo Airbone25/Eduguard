@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { SectionNav } from "@/components/common/SectionNav";
 import { ProgressChart } from "@/components/charts/ProgressChart";
+import { RiskTrajectoryChart } from "@/components/charts/RiskTrajectoryChart";
 import { Insights } from "@/features/predictions/Insights";
-import { usePredictions, latestPrediction } from "@/features/predictions/hooks";
+import { usePredictions, latestPrediction, useForecast } from "@/features/predictions/hooks";
 import { SupportBadge, TrendIndicator } from "@/components/common/domain";
 import { InterventionWorkspace } from "@/features/interventions/InterventionWorkspace";
 import { BookOpen, CalendarCheck, ClipboardCheck } from "lucide-react";
@@ -19,6 +20,7 @@ import {
 } from "@/components/common/states";
 import { MetricCard, PageHeader } from "@/components/common/domain";
 import { courseLabel, dateLabel, percent } from "@/lib/utils";
+import { useSetSignalBand } from "@/stores/signalBandStore";
 
 export default function StudentDetail() {
   const { studentId = "" } = useParams();
@@ -28,7 +30,17 @@ export default function StudentDetail() {
   const classes = useTeacherClasses();
   const progress = useStudentProgress(studentId, courseId);
   const predictions = usePredictions(studentId, courseId);
+  const forecast = useForecast(studentId, courseId);
   const latest = latestPrediction(predictions.data);
+  useSetSignalBand({
+    label: "Student route",
+    detail: latest
+      ? "Advisory signal · teacher only · open the explanation before acting"
+      : "No saved insight yet · generate one from weekly records",
+    value: latest ? `${Math.round(latest.risk_probability * 100)}%` : null,
+    targetId: "insight-explanation",
+    actionLabel: "Open explanation",
+  });
   const tabs = [
     "Overview",
     "Academics",
@@ -57,7 +69,6 @@ export default function StudentDetail() {
         ← Back to overview
       </Link>
       <PageHeader
-        eyebrow="Student overview"
         title={`${s.user.first_name} ${s.user.last_name}`}
         description={`Roll number ${s.roll_number} · ${s.grade_label}`}
       />
@@ -193,11 +204,18 @@ export default function StudentDetail() {
                 }}
               />
             ) : (
-              <Insights
-                studentId={studentId}
-                courseId={courseId}
-                prediction={latest}
-              />
+              <>
+                <RiskTrajectoryChart
+                  predictions={predictions.data ?? []}
+                  forecast={forecast.data}
+                  forecastError={forecast.error ?? null}
+                />
+                <Insights
+                  studentId={studentId}
+                  courseId={courseId}
+                  prediction={latest}
+                />
+              </>
             ))}
           {tab === "History" && (
             <section className="panel padded">
