@@ -1,279 +1,215 @@
 ---
 name: EduGuard
-description: Early-warning academic-risk platform — an indexed, explainable, teacher-facing signal system
+description: The learning journal — clear observations, considered support, human follow-through
 colors:
-  stock: "#f7f5ef"
-  card: "#fffdf7"
-  drawer: "#f2efe6"
-  rail: "#23271f"
-  rail-raised: "#2e332a"
-  rail-line: "#3a3f37"
-  ink: "#20241f"
-  ink-2: "#52574d"
-  ink-3: "#74796e"
-  rule: "#ded9cd"
-  rule-strong: "#c9c3b3"
-  stamp: "#b23a2b"
-  stamp-deep: "#8d2c20"
-  stamp-wash: "#f9ece6"
-  ochre: "#8f6a16"
-  ochre-wash: "#f8f1de"
-  sage: "#3e6b4f"
-  sage-wash: "#eaf2e8"
-  critical: "#a6281c"
-  critical-wash: "#fbe9e5"
-  neutral-wash: "#eeece4"
-  chart-ink: "#20241f"
-  chart-ochre: "#a3672a"
-  chart-grid: "#e7e2d6"
-  focus: "#8f6a16"
-  call-number: "#6f7468"
-  plate: "#e8e2cf"
-  plate-ink: "#6b6450"
+  paper: "#f8f7f4"
+  surface: "#fff"
+  ink: "#342737"
+  muted: "#716966"
+  rule: "#e3dfda"
+  plum: "#49344c"
+  plum-deep: "#352638"
+  lilac: "#eee8f0"
+  sage: "#326143"
+  sage-wash: "#edf4ef"
+  rust: "#963d2e"
+  rust-wash: "#fbefea"
+  ochre: "#7e591e"
+  ochre-wash: "#fbf4e6"
+  primary-hover: "#624969"
+  focus: "#8c6293"
+  evidence: "#f6f2f7"
+  chart-purple: "#69517b"
+  chart-green: "#39714e"
 typography:
   display:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "30px"
-    fontWeight: 650
-    lineHeight: "1.2"
-    letterSpacing: "-0.03em"
-  metric:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "34px"
-    fontWeight: 650
-    lineHeight: "1"
-    letterSpacing: "-0.04em"
-    fontFeature: "tabular-nums"
+    fontFamily: 'Georgia, "Times New Roman", serif'
+    fontSize: "clamp(30px, 2.7vw, 40px)"
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: "-1.1px"
+  headline:
+    fontFamily: 'Georgia, "Times New Roman", serif'
+    fontSize: "28px"
+    fontWeight: 400
   title:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "16px"
-    fontWeight: 650
-    lineHeight: "1.4"
+    fontFamily: '"Segoe UI", Arial, sans-serif'
+    fontSize: "17px"
+    fontWeight: 600
+    letterSpacing: "-0.3px"
   body:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "13px"
+    fontFamily: '"Segoe UI", Arial, sans-serif'
+    fontSize: "14px"
     fontWeight: 400
-    lineHeight: "1.6"
-  small:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "11px"
-    fontWeight: 400
-    lineHeight: "1.6"
+    lineHeight: 1.55
   label:
-    fontFamily: "\"Segoe UI\", system-ui, -apple-system, sans-serif"
-    fontSize: "10px"
-    fontWeight: 700
-    lineHeight: "1.4"
-    letterSpacing: "1.4px"
-    textTransform: "uppercase"
-  call:
-    fontFamily: "ui-monospace, SFMono-Regular, monospace"
-    fontSize: "11px"
-    fontWeight: 400
+    fontFamily: '"Segoe UI", Arial, sans-serif'
+    fontSize: "12px"
+    fontWeight: 600
+  metric:
+    fontFamily: '"Segoe UI", Arial, sans-serif'
+    fontSize: "31px"
+    fontWeight: 550
+    lineHeight: 1.3
+    letterSpacing: "-0.8px"
 rounded:
-  tab: "3px"
-  chip: "4px"
-  input: "6px"
-  button: "6px"
-  card: "4px"
-  panel: "6px"
-  overlay: "10px"
+  badge: "5px"
+  control: "6px"
+  navigation: "7px"
+  lg: "8px"
+  panel: "12px"
 spacing:
-  xs: "6px"
-  sm: "10px"
-  md: "14px"
-  lg: "20px"
+  xs: "8px"
+  sm: "12px"
+  md: "18px"
+  lg: "24px"
   xl: "28px"
-  gutter: "34px"
+  gutter: "38px"
 components:
   button-primary:
-    backgroundColor: "{colors.stamp}"
-    textColor: "{colors.card}"
-    rounded: "{rounded.button}"
-    padding: "9px 14px"
-    height: "38px"
+    backgroundColor: "{colors.plum}"
+    textColor: "{colors.surface}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "10px 15px"
   button-primary-hover:
-    backgroundColor: "{colors.stamp-deep}"
-  button-outline:
-    backgroundColor: "{colors.card}"
+    backgroundColor: "{colors.primary-hover}"
+  button-secondary:
+    backgroundColor: "transparent"
+    textColor: "{colors.plum}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "10px 15px"
+  button-secondary-hover:
+    backgroundColor: "{colors.lilac}"
+  login-input:
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.button}"
-    padding: "9px 14px"
-    height: "38px"
-  button-ghost:
-    textColor: "{colors.ink-2}"
-    rounded: "{rounded.button}"
-    padding: "9px 14px"
-    height: "38px"
-  input:
-    backgroundColor: "{colors.card}"
+    rounded: "{rounded.control}"
+    padding: "10px 13px"
+    height: "46px"
+  navigation-active:
+    backgroundColor: "#efe7f1"
+    textColor: "{colors.plum}"
+    rounded: "{rounded.navigation}"
+    padding: "11px 14px"
+  status-critical:
+    backgroundColor: "{colors.rust-wash}"
+    textColor: "{colors.rust}"
+    rounded: "{rounded.badge}"
+    padding: "4px 8px"
+  signal-panel:
+    backgroundColor: "{colors.surface}"
+    rounded: "{rounded.panel}"
+  evidence-content:
+    backgroundColor: "{colors.evidence}"
+    rounded: "{rounded.control}"
+    padding: "18px"
+  metric:
     textColor: "{colors.ink}"
-    rounded: "{rounded.input}"
-    padding: "9px 12px"
-    height: "40px"
-  index-card:
-    backgroundColor: "{colors.card}"
-    rounded: "{rounded.card}"
-    borderColor: "{colors.rule}"
-    tabHeight: "22px"
-  pull-slip:
-    backgroundColor: "{colors.drawer}"
-    rounded: "{rounded.tab}"
-    ruleColor: "{colors.rule}"
-  nav-item-active:
-    backgroundColor: "{colors.rail-raised}"
-    textColor: "{colors.card}"
+    typography: "{typography.metric}"
 ---
 
 # Design System: EduGuard
 
 ## Overview
 
-**Creative North Star: "The Signal Index"**
+**Creative North Star: "The learning journal"**
 
-EduGuard looks like a well-kept card catalogue in a school library: warm stock
-paper, charcoal ink, hairline rules, and one vermilion stamp that marks
-everything requiring a human decision. A teacher does not face a wall of
-charts or a gradebook; they face a ranked drawer of student signals. Each
-signal is an indexed card with a small classification tab — priority, watch,
-improving, not assessed. Pull the card and a stamped evidence slip explains,
-in the model's own exact terms, why it was filed there and what action is
-yours to take. The visual system is an instrument of filing and explanation,
-not of spectacle.
+EduGuard uses the quiet clarity of academic editorial design: warm paper, deep plum, generous Georgia headings, and precise sans-serif controls. The interface gives people and their observations room to be read while keeping records, evidence, and actions close together.
 
-The research behind this world is consistent across public AI-education and
-learning-analytics references: conclusion-first layouts, a tight set of
-decision-linked metrics, familiar bar/line charts, visible comparison and
-trend, traffic-light states that never rely on color alone, explainable AI
-framed as an analyst rather than an oracle, and explicit human-in-the-loop and
-privacy cues. Teachers prefer simple charts even when denser ones carry more
-information; therefore the charts here stay ordinary and the distinctiveness
-lives in the filing grammar — tabs, slips, call numbers, ruled rows.
+The system is calm and practical. Fine rules and pale washes organize information; conventional navigation, tables, forms, and native disclosures carry the work. The journal is expressed through typography and spacing, without inventing unfamiliar controls or decorative imagery.
 
-**Key characteristics:**
-- Warm catalogue stock and card white; charcoal rail; one vermilion stamp accent.
-- Ranked, finite index cards with classification tabs and pull-slip evidence.
-- Hairline rules and tonal washes provide all depth; shadows only on overlays.
-- 10–14px humanist sans, 34px tabular numerals, monospace call numbers.
-- Ochre for watch, sage for improving, vermilion for priority and critical — always with a text label.
-- Governance printed on the shell: advisory, teacher-only, never a verdict, never student-facing.
+**Key Characteristics:**
+- Warm paper and white surfaces with a deep plum navigation rail.
+- Georgia headings paired with Segoe UI controls and tabular working numbers.
+- Ruled records, softly rounded panels, and restrained lilac emphasis.
+- Text-labelled rust, ochre, and sage states.
+- Evidence revealed in place with native disclosures.
+- Plain language that preserves human judgment and student privacy.
 
-## Research basis
-
-This system replaces the earlier "Field Notebook" world. Mobbin was unavailable
-(paid MCP plan), so the reference set came from public sources: AI learning
-analytics dashboards (8allocate, Springer systematic review), teacher-facing
-LAD research (DashED, FeedBook, TEADASH, Mejia-Domenzain et al. 2026), the
-evulpo Class Hub case study, the Razzmic K-12 analytics case study, a school
-leadership command-center case study, UQ's Student Experience AI Dashboard,
-and SaaS KPI/analytics pattern guides. Their shared lessons became rules below:
-lead with the answer; pair every number with a comparison; use familiar charts;
-show evidence next to AI output; label synthetic/demo data; keep the human in
-control; never expose risk to students.
+This document records the implemented replacement for the retired Signal Index world. Source authority is `frontend/src/index.css`, shared components, and `.impeccable/redesign-direction.md`; page strategy lives in surface briefs. Tokens above are normative; the sidecar adds preview snippets and non-token metadata.
 
 ## Colors
 
-### The ground and the ink
-- **Catalogue Stock** (`#f7f5ef`): the page canvas — warm, matte, unbleached.
-- **Card White** (`#fffdf7`): every index card, panel, input, and table surface; a shade warmer than paper white.
-- **Drawer** (`#f2efe6`): secondary bands, table headers, open pull slips, and inactive tabs.
-- **Rail Charcoal** (`#23271f`): navigation rail and topbar, with raised `#2e332a` and rule `#3a3f37`.
-- **Ink** (`#20241f`): headings and primary text; **Ink 2** (`#52574d`) body copy; **Ink 3** (`#74796e`) the contrast floor for secondary copy.
-- **Rule** (`#ded9cd`) and **Rule Strong** (`#c9c3b3`): 1px hairlines only.
+### Primary
 
-### The stamp and the classifications
-- **Vermilion Stamp** (`#b23a2b`): the one live accent — primary buttons, active marker, priority tab, onset dots, focus-adjacent emphasis; hover deepens to `#8d2c20`, wash `#f9ece6`.
-- **Ochre** (`#8f6a16`): watch classification on `#f8f1de`; the focus ring also uses this hue.
-- **Sage** (`#3e6b4f`): improving classification on `#eaf2e8`.
-- **Critical Red** (`#a6281c`) on `#fbe9e5`: validation, destructive actions, and the sharpest risk state — text and border only, never a full flood.
-- **Unfiled** (`#eeece4` with ink-3 text): the not-assessed state.
+**Plum** carries primary actions and links. **Deep plum** anchors the navigation and login story. **Lilac** is a quiet selected-state and supporting surface; it does not imply urgency. Primary hover and focus are distinct, so keyboard position is visible independently of selection.
 
-### Data and punctuation
-- **Chart Ink** (`#20241f`): observed series and bars. **Chart Ochre** (`#a3672a`): projected/uncertainty series. **Chart Grid** (`#e7e2d6`): axes and gridlines. A single vermilion dot marks the week a trajectory changed; never a second accent color.
-- **Borrower Plate** (`#e8e2cf` with `#6b6450` text): avatar circles, keeping people distinct from data.
-- **Call Number** (`#6f7468`, monospace): entity IDs, snapshot dates, and record codes.
+### Secondary
 
-### Named rules
-**The Stock Rule.** Light surfaces are warm and matte; the rail is the only dark region. Ink lives on stock, never the reverse — on the rail, text is card-white or its dimmed family.
-**The Labelled Stamp Rule.** A state is a tab or badge whose text names the state; color is never the sole carrier. Classifications are always one of priority, watch, improving, unfiled.
+**Rust** marks a check-in or critical support signal, **ochre** a watch or support-planning state, and **sage** improvement or ongoing positive progress. Pair each with its named wash and a text label. Purple and green chart series belong to assessment/assignment and attendance observations respectively; do not substitute chart color for a label or legend.
+
+### Neutral
+
+**Paper** is the page ground, **surface** the white working panel, **ink** the main text, **muted** secondary copy, and **rule** the structural divider. Tailwind's slate, amber, emerald, and red theme ramps in the stylesheet are coordinated with these families; preserve those mappings when using existing utility-built screens.
+
+**The Named State Rule.** Every support state is named in text; color and icons supplement that name.
 
 ## Typography
 
-One family, no webfont: "Segoe UI" with system fallbacks. It keeps numbers native and precise; weight and tight tracking do the emphasis work. `ui-monospace` appears only for call numbers. No eyebrow kicker sits above a heading — headings carry their own weight; stamped labels belong on cards, tabs, and controls.
+Georgia with Times New Roman fallback gives page headings and selected section headings an editorial voice. Segoe UI with Arial fallback handles body text, forms, navigation, tables, and numbers. No downloaded font is required. Monospace (`ui-monospace, Consolas, monospace`) is reserved for technical identifiers and selected chart values already using it.
 
-- **Display** (650, 30px, 1.2, -0.03em): page h1.
-- **Metric** (650, 34px, 1, -0.04em, tabular): advisory values and card headline numbers; always paired with a comparison or window.
-- **Title** (650, 16px, 1.4): panel and card headings.
-- **Body** (400, 13px, 1.6): paragraphs, forms, and recommendations; measure capped at 75ch.
-- **Small** (400–650, 11px, 1.6): tables, tabs, badges, secondary copy.
-- **Label** (700, 10px, uppercase, 1.4px): control labels, classification tabs, stamped metadata.
-- **Call** (400, 11px, monospace): IDs and record codes.
+The display token describes the fluid desktop page title; mobile page titles are explicitly set to 33px. Section headings use either the serif headline or the compact sans title according to the existing hierarchy. Body copy uses the body token, with descriptive copy capped at 65ch. Labels use sentence case. Metrics and tables use tabular numerals; numeric table cells align right.
 
-### Named rules
-**The Tabular Rule.** Every aligned number, table column, and metric uses tabular numerals; right-align amounts and totals.
-**The Fixed-Scale Rule.** Type sizes are fixed, not fluid — this is a working instrument at a known DPI. Ratio steps stay between 1.125 and 1.2 outside the metric/display pair.
+Functional component text varies from 11–15px, with some secondary mobile metadata at 10px. This is an extraction of the current implementation, not a claim that every surface has passed an accessibility audit. WCAG 2.1 AA remains the product target.
+
+**The Reading Order Rule.** Use heading size and space to establish hierarchy; keep operational labels quiet and readable.
 
 ## Layout
 
-Fixed charcoal rail (228px; 204px ≤1280px; 184px ≤1024px; hidden ≤767px in favor of a 280px sheet). Paper topbar 72px (64px mobile) with breadcrumb left, governance stamp and account right. Main canvas centered at `max-width: 1600px`, padding 28px 34px (20px 18px mobile). Following the research, the first viewport is conclusion-first: sticky attention band → ranked signal index → compact metric strip → charts/tables below.
+The desktop shell has a fixed 232px rail, a 69px topbar, and a centered main region capped at 1600px with 38px padding. At 1250px and below, the rail narrows to 210px and main padding to 28px. At 1023px and below, navigation moves into a native dialog drawer (290px, capped at 88vw). At 767px and below, main padding is 25px 18px and the topbar is 59px tall.
 
-Rhythm: 20–28px between page regions, 10–14px inside data regions. Metric strip is 5-up desktop → 3-up ≤1024px → 2-up mobile. Detail grids 2-col → 1-col ≤600px. Breakpoints: 1600 / 1280 / 1024 / 767 / 600.
+Use the shared page header, then task-specific regions separated by whitespace and fine rules. Dashboard composition is documented in its surface brief. Metric strips use five desktop columns and three mobile columns; they are divided readings rather than individual floating cards. Record tables keep horizontal overflow inside their own scroll regions, including on narrow phones. Forms wrap actions and controls rather than forcing the page wider.
+
+The login layout uses two equal desktop columns and stacks at the mobile breakpoint. Native responsive behavior and existing route structure take precedence over metaphor.
 
 ## Elevation & Depth
 
-Depth is physical but flat: stacked sheets of stock separated by 1px rules and tonal washes. Resting cards take no shadow. Only overlays lift.
+Working panels rest flat: white surfaces, pale washes, and fine borders provide separation. Small Tailwind shadow tokens are neutralized in the shared theme. Dialogs use the implemented overlay lift (`0 24px 80px #241c2738`) and a dark translucent backdrop (`#241c2780`); existing chart tooltips may retain their utility shadow. Do not apply overlay elevation to routine cards.
 
-- **Overlay lift** `0 18px 60px #1c201a38` for modals and sheets.
-- **Slip edge** `0 1px 0 var(--rule)` for an open pull slip — a rule, not a shadow.
-- No translate-on-hover, no glow, no zero-blur colored halos.
+**The Quiet Surface Rule.** Establish ordinary hierarchy with spacing, rules, and tone; reserve pronounced elevation for content floating above the page.
 
 ## Shapes
 
-Corners are tight and paper-like: 3px tabs, 4px chips and cards, 6px inputs/buttons/panels, 10px overlays, 50% avatars. Classification tabs sit at the card's top-right edge as a 22px stamped chip — never a colored left border. Rules are always 1px and drawn in the rule family.
+Outer panels and dialogs use the panel radius. Controls and evidence interiors use the control radius; navigation uses its own slightly softer radius. Status labels use the badge radius, while person initials sit in circles. The brand mark retains its asymmetric corners. Borders are generally one pixel; active tabs use a two-pixel underline.
 
 ## Components
 
-### Buttons
-6px radius, 38px min-height, 9px 14px padding, 12px/700 label, 8px icon gap. Primary is a vermilion stamp fill with card-white text, deepening on hover; outline is card-white with ink text and a rule border; ghost is transparent with ink-2 text. Danger text links are the only other red use. Every state — hover, focus, active, disabled, loading, error — is designed.
+### Buttons and links
 
-### Index Card (signature)
-A card-white sheet, 4px radius, 1px rule, 16px padding. Its top-right carries a 22px classification tab: priority (vermilion), watch (ochre), improving (sage), unfiled (neutral). Header row holds the student name, a monospace call number, and a right-aligned snapshot date. One line states the change in plain language; a right-aligned metric shows the value and its comparison. Nothing decorative is added to make it look "data-like".
+Primary and outlined secondary buttons share compact sans labels, an eight-pixel icon gap, and a 42px base minimum height. The application main-region selector currently overrides generic button minimum height to 36px; padding can make the rendered control taller. Login submit remains 46px. Primary hover deepens the plum; secondary hover fills lilac. Text links underline on hover. Disabled controls reduce opacity and use the unavailable cursor. Preserve explicit loading labels when an action is pending.
 
-### Pull Slip (signature)
-Each index card ends with a stamped disclosure labelled "Why this card was pulled". Opening it reveals a drawer-toned slip: the exact contributing factors from the persisted prediction, each with its signed contribution and a plain-language label, followed by "Suggested next step" and the governance line "Advisory. You decide." The slip is native `<details>`/`<summary>` — accessible, keyboard-operable, and never a modal.
+### Inputs and navigation
 
-### Attention Band
-Sticky below the topbar: paper ground, a vermilion tab marker, an uppercase label, a monumental tabular count, and a jump link. On student routes the marker is charcoal; the band never turns into a traffic-light billboard.
+The login input token records the 46px field with a light border; general text inputs and selects have a 40px minimum. Inputs keep visible labels and meaningful errors. Focus-visible uses a three-pixel purple outline offset by three pixels. The global focus treatment also applies to links, buttons, summaries, and tab controls.
 
-### Metric Cards
-Card-white, 4px radius, rule border, 16px padding. Label 10px uppercase; value 34px tabular with -0.04em tracking; comparison in 11px with an explicit window ("vs last 4 weeks"). Direction and sentiment are separate: the arrow shows movement, the hue shows whether that movement is good for this metric.
+Navigation links are 46px minimum-height rows on the plum rail. The active link has a pale background and plum text. On smaller screens, the menu button opens the native drawer; preserve its close action, focus behavior, and accessible name. A skip link becomes visible on focus.
 
-### Tables
-11px (12px ≥1600px); header 10px/700 uppercase on Drawer with hairline top/bottom; cells 16px 14px padded, ink-2 text, hairline dividers; row hover `#f4f1e8`; numbers tabular and right-aligned; first/last cells get 22px inset.
+### Panels, state labels, and metrics
 
-### Charts
-Recharts rendered on card white with chart-grid axes, chart-ink observed series, chart-ochre projected area, and one vermilion onset dot. Bar charts use chart-ink with a single highlighted category. Every chart keeps its accessible HTML values disclosure and `aria-hidden` plot, so the numbers remain available without color or hover.
+White signal and roster panels enclose ruled rows with no resting shadow. State chips combine readable names with the semantic color families. The shared support badge is a related bordered variant using theme ramps; its labels distinguish priority support, watch, doing well, and not assessed. Metrics remain typographic, with a label and optional explanatory detail.
 
-### Badges, States, Overlays
-Status badges: 4px chips, 10px/700 uppercase text on the matching wash, always with the state word. Skeletons pulse in Drawer tones; empty states use a Drawer plate with a short teaching sentence; errors are critical-wash cards naming the problem and the retry. Modals are card-white, 10px radius, scrim `#1c201a66`, and reserve focus properly.
+### Evidence disclosure
 
-### Browser surfaces
-Selection, caret, scrollbars, focus ring, underline offset, and tabular numerals are themed from this palette. Focus is a 3px ochre ring with 2px offset on every interactive element; reduced motion disables transitions and reveals.
+Native details and summary reveal a pale evidence interior next to the student review action. Expanded content shows available recorded contributing factors and model estimates, plus an advisory reminder. A suggested next step appears only when supplied by the data. Missing factors receive an explicit empty message; do not invent explanations. Opening uses a 220ms ease-out fade and three-pixel movement. General state transitions last 160ms. Reduced-motion preference reduces animations and transitions to .01ms and disables smooth scrolling.
+
+### Dialogs, feedback, and charts
+
+Shared dialogs use a 540px maximum width constrained by the viewport and an 88dvh maximum height. Loading skeletons, empty states, and error panels have distinct explanatory copy and retry or recovery actions where implemented. Preserve status announcements and chart value-table disclosures when extending screens. Chart series represent supplied observations or explicitly supplied projections; visual capability is not evidence of a deployed forecasting service.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** file every signal into a ranked, finite index with a named classification tab.
-- **Do** show the evidence slip next to the claim; every AI output cites the persisted factors it used.
-- **Do** pair every metric with a comparison and an explicit time window.
-- **Do** keep charts familiar and let the filing grammar carry the identity.
-- **Do** print governance in the shell: teacher-only, advisory, never a verdict, never shown to a student.
-- **Do** theme browser defaults and keep the amber/ochre focus ring visible everywhere.
+- **Do** use the shared tokens, page headers, controls, and state components across roles.
+- **Do** keep support states text-labelled and keyboard focus visible.
+- **Do** keep evidence beside the teacher's review action and identify model output as advisory.
+- **Do** preserve reduced-motion behavior and contain wide records within table scroll regions.
+- **Do** label synthetic, read-only demo data clearly and keep validity limits honest.
 
 ### Don't:
-- **Don't** reintroduce the retired evergreen palette, cool navy/yellow console, gradients, glows, or saturated page floods.
-- **Don't** use color alone for risk: every tab and badge names its state.
-- **Don't** put a shadow on a resting card, animate hover lifts, or use a colored left border as a classification.
-- **Don't** use an eyebrow above a heading, a modal for a simple disclosure, or a decorative display face in UI labels.
-- **Don't** reveal risk probabilities, percentages, or AI outputs to student-role surfaces — privacy is structural, not visual.
-- **Don't** invent data the model did not use; demo data stays visibly synthetic.
+- **Don't** expose risk probabilities, risk levels, internal severity, or teacher-only AI outputs in student views.
+- **Don't** present a signal as a diagnosis, verdict, or demonstrated real-school performance.
+- **Don't** replace raw weekly observation fields with derived model features.
+- **Don't** invent observations, evidence, customers, testimonials, deployment claims, or unimplemented product capabilities.
+- **Don't** reintroduce the retired catalogue tabs, vermilion action palette, or stamped micro-label system.

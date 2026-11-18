@@ -1,136 +1,456 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-18T00:00:00Z",
-  "title": "Design System: EduGuard — The Signal Index",
+  "generatedAt": "2026-11-18T04:04:42.746291+00:00",
+  "title": "Design System: EduGuard",
   "extensions": {
     "colorMeta": {
-      "stock": { "role": "neutral", "displayName": "Catalogue Stock", "canonical": "#f7f5ef" },
-      "card": { "role": "neutral", "displayName": "Card White", "canonical": "#fffdf7" },
-      "drawer": { "role": "neutral", "displayName": "Drawer", "canonical": "#f2efe6" },
-      "rail": { "role": "neutral", "displayName": "Rail Ink", "canonical": "#23271f" },
-      "rail-raised": { "role": "neutral", "displayName": "Rail Raised", "canonical": "#2e332a" },
-      "rail-line": { "role": "neutral", "displayName": "Rail Line", "canonical": "#3a3f37" },
-      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#20241f" },
-      "ink-2": { "role": "neutral", "displayName": "Ink Secondary", "canonical": "#52574d" },
-      "ink-3": { "role": "neutral", "displayName": "Ink Tertiary", "canonical": "#74796e" },
-      "rule": { "role": "neutral", "displayName": "Hairline Rule", "canonical": "#ded9cd" },
-      "rule-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "#c9c3b3" },
-      "stamp": { "role": "primary", "displayName": "Vermilion Stamp", "canonical": "#b23a2b" },
-      "stamp-deep": { "role": "primary", "displayName": "Vermilion Pressed", "canonical": "#8d2c20" },
-      "stamp-wash": { "role": "primary", "displayName": "Stamp Wash", "canonical": "#f9ece6" },
-      "ochre": { "role": "secondary", "displayName": "Ochre Watch", "canonical": "#8f6a16" },
-      "ochre-wash": { "role": "secondary", "displayName": "Ochre Wash", "canonical": "#f8f1de" },
-      "sage": { "role": "secondary", "displayName": "Sage Improving", "canonical": "#3e6b4f" },
-      "sage-wash": { "role": "secondary", "displayName": "Sage Wash", "canonical": "#eaf2e8" },
-      "critical": { "role": "secondary", "displayName": "Critical", "canonical": "#a6281c" },
-      "critical-wash": { "role": "secondary", "displayName": "Critical Wash", "canonical": "#fbe9e5" },
-      "neutral-wash": { "role": "neutral", "displayName": "Neutral Wash", "canonical": "#eeece4" },
-      "chart-ink": { "role": "data", "displayName": "Chart Ink", "canonical": "#20241f" },
-      "chart-ochre": { "role": "data", "displayName": "Chart Forecast", "canonical": "#a3672a" },
-      "chart-grid": { "role": "data", "displayName": "Chart Grid", "canonical": "#e7e2d6" },
-      "focus": { "role": "secondary", "displayName": "Focus", "canonical": "#8f6a16" },
-      "call-number": { "role": "neutral", "displayName": "Call Number", "canonical": "#6f7468" },
-      "plate": { "role": "neutral", "displayName": "Plate", "canonical": "#e8e2cf" },
-      "plate-ink": { "role": "neutral", "displayName": "Plate Ink", "canonical": "#6b6450" }
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15.0% 0.0019 91.4)",
+          "oklch(26.4% 0.0030 91.4)",
+          "oklch(37.9% 0.0038 91.4)",
+          "oklch(49.3% 0.0041 91.4)",
+          "oklch(60.7% 0.0039 91.4)",
+          "oklch(72.1% 0.0032 91.4)",
+          "oklch(83.6% 0.0020 91.4)",
+          "oklch(95.0% 0.0006 91.4)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.0% 0.0000 89.9)",
+          "oklch(26.4% 0.0000 89.9)",
+          "oklch(37.9% 0.0000 89.9)",
+          "oklch(49.3% 0.0000 89.9)",
+          "oklch(60.7% 0.0000 89.9)",
+          "oklch(72.1% 0.0000 89.9)",
+          "oklch(83.6% 0.0000 89.9)",
+          "oklch(95.0% 0.0000 89.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0153 319.9)",
+          "oklch(26.4% 0.0248 319.9)",
+          "oklch(37.9% 0.0313 319.9)",
+          "oklch(49.3% 0.0337 319.9)",
+          "oklch(60.7% 0.0318 319.9)",
+          "oklch(72.1% 0.0259 319.9)",
+          "oklch(83.6% 0.0166 319.9)",
+          "oklch(95.0% 0.0053 319.9)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.0% 0.0051 41.8)",
+          "oklch(26.4% 0.0082 41.8)",
+          "oklch(37.9% 0.0104 41.8)",
+          "oklch(49.3% 0.0112 41.8)",
+          "oklch(60.7% 0.0105 41.8)",
+          "oklch(72.1% 0.0086 41.8)",
+          "oklch(83.6% 0.0055 41.8)",
+          "oklch(95.0% 0.0017 41.8)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "tonalRamp": [
+          "oklch(15.0% 0.0037 73.7)",
+          "oklch(26.4% 0.0059 73.7)",
+          "oklch(37.9% 0.0075 73.7)",
+          "oklch(49.3% 0.0081 73.7)",
+          "oklch(60.7% 0.0076 73.7)",
+          "oklch(72.1% 0.0062 73.7)",
+          "oklch(83.6% 0.0040 73.7)",
+          "oklch(95.0% 0.0013 73.7)"
+        ]
+      },
+      "plum": {
+        "role": "primary",
+        "displayName": "Plum",
+        "tonalRamp": [
+          "oklch(15.0% 0.0223 322.2)",
+          "oklch(26.4% 0.0362 322.2)",
+          "oklch(37.9% 0.0455 322.2)",
+          "oklch(49.3% 0.0490 322.2)",
+          "oklch(60.7% 0.0463 322.2)",
+          "oklch(72.1% 0.0377 322.2)",
+          "oklch(83.6% 0.0242 322.2)",
+          "oklch(95.0% 0.0077 322.2)"
+        ]
+      },
+      "plum-deep": {
+        "role": "primary",
+        "displayName": "Plum deep",
+        "tonalRamp": [
+          "oklch(15.0% 0.0173 320.7)",
+          "oklch(26.4% 0.0281 320.7)",
+          "oklch(37.9% 0.0354 320.7)",
+          "oklch(49.3% 0.0381 320.7)",
+          "oklch(60.7% 0.0359 320.7)",
+          "oklch(72.1% 0.0293 320.7)",
+          "oklch(83.6% 0.0188 320.7)",
+          "oklch(95.0% 0.0060 320.7)"
+        ]
+      },
+      "lilac": {
+        "role": "primary",
+        "displayName": "Lilac",
+        "tonalRamp": [
+          "oklch(15.0% 0.0056 317.7)",
+          "oklch(26.4% 0.0092 317.7)",
+          "oklch(37.9% 0.0115 317.7)",
+          "oklch(49.3% 0.0124 317.7)",
+          "oklch(60.7% 0.0117 317.7)",
+          "oklch(72.1% 0.0095 317.7)",
+          "oklch(83.6% 0.0061 317.7)",
+          "oklch(95.0% 0.0019 317.7)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Sage",
+        "tonalRamp": [
+          "oklch(15.0% 0.0326 154.3)",
+          "oklch(26.4% 0.0529 154.3)",
+          "oklch(37.9% 0.0667 154.3)",
+          "oklch(49.3% 0.0718 154.3)",
+          "oklch(60.7% 0.0678 154.3)",
+          "oklch(72.1% 0.0552 154.3)",
+          "oklch(83.6% 0.0354 154.3)",
+          "oklch(95.0% 0.0112 154.3)"
+        ]
+      },
+      "sage-wash": {
+        "role": "secondary",
+        "displayName": "Sage wash",
+        "tonalRamp": [
+          "oklch(15.0% 0.0045 155.1)",
+          "oklch(26.4% 0.0073 155.1)",
+          "oklch(37.9% 0.0092 155.1)",
+          "oklch(49.3% 0.0099 155.1)",
+          "oklch(60.7% 0.0094 155.1)",
+          "oklch(72.1% 0.0076 155.1)",
+          "oklch(83.6% 0.0049 155.1)",
+          "oklch(95.0% 0.0016 155.1)"
+        ]
+      },
+      "rust": {
+        "role": "secondary",
+        "displayName": "Rust",
+        "tonalRamp": [
+          "oklch(15.0% 0.0560 31.6)",
+          "oklch(26.4% 0.0909 31.6)",
+          "oklch(37.9% 0.1145 31.6)",
+          "oklch(49.3% 0.1232 31.6)",
+          "oklch(60.7% 0.1164 31.6)",
+          "oklch(72.1% 0.0947 31.6)",
+          "oklch(83.6% 0.0607 31.6)",
+          "oklch(95.0% 0.0193 31.6)"
+        ]
+      },
+      "rust-wash": {
+        "role": "secondary",
+        "displayName": "Rust wash",
+        "tonalRamp": [
+          "oklch(15.0% 0.0067 44.2)",
+          "oklch(26.4% 0.0108 44.2)",
+          "oklch(37.9% 0.0136 44.2)",
+          "oklch(49.3% 0.0147 44.2)",
+          "oklch(60.7% 0.0138 44.2)",
+          "oklch(72.1% 0.0113 44.2)",
+          "oklch(83.6% 0.0072 44.2)",
+          "oklch(95.0% 0.0023 44.2)"
+        ]
+      },
+      "ochre": {
+        "role": "secondary",
+        "displayName": "Ochre",
+        "tonalRamp": [
+          "oklch(15.0% 0.0402 75.2)",
+          "oklch(26.4% 0.0652 75.2)",
+          "oklch(37.9% 0.0821 75.2)",
+          "oklch(49.3% 0.0884 75.2)",
+          "oklch(60.7% 0.0835 75.2)",
+          "oklch(72.1% 0.0680 75.2)",
+          "oklch(83.6% 0.0436 75.2)",
+          "oklch(95.0% 0.0138 75.2)"
+        ]
+      },
+      "ochre-wash": {
+        "role": "secondary",
+        "displayName": "Ochre wash",
+        "tonalRamp": [
+          "oklch(15.0% 0.0091 84.6)",
+          "oklch(26.4% 0.0147 84.6)",
+          "oklch(37.9% 0.0185 84.6)",
+          "oklch(49.3% 0.0199 84.6)",
+          "oklch(60.7% 0.0188 84.6)",
+          "oklch(72.1% 0.0153 84.6)",
+          "oklch(83.6% 0.0098 84.6)",
+          "oklch(95.0% 0.0031 84.6)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Primary hover",
+        "tonalRamp": [
+          "oklch(15.0% 0.0272 318.7)",
+          "oklch(26.4% 0.0441 318.7)",
+          "oklch(37.9% 0.0556 318.7)",
+          "oklch(49.3% 0.0598 318.7)",
+          "oklch(60.7% 0.0565 318.7)",
+          "oklch(72.1% 0.0460 318.7)",
+          "oklch(83.6% 0.0295 318.7)",
+          "oklch(95.0% 0.0094 318.7)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15.0% 0.0402 321.6)",
+          "oklch(26.4% 0.0653 321.6)",
+          "oklch(37.9% 0.0823 321.6)",
+          "oklch(49.3% 0.0886 321.6)",
+          "oklch(60.7% 0.0836 321.6)",
+          "oklch(72.1% 0.0681 321.6)",
+          "oklch(83.6% 0.0436 321.6)",
+          "oklch(95.0% 0.0139 321.6)"
+        ]
+      },
+      "evidence": {
+        "role": "primary",
+        "displayName": "Evidence",
+        "tonalRamp": [
+          "oklch(15.0% 0.0036 319.4)",
+          "oklch(26.4% 0.0058 319.4)",
+          "oklch(37.9% 0.0073 319.4)",
+          "oklch(49.3% 0.0078 319.4)",
+          "oklch(60.7% 0.0074 319.4)",
+          "oklch(72.1% 0.0060 319.4)",
+          "oklch(83.6% 0.0039 319.4)",
+          "oklch(95.0% 0.0012 319.4)"
+        ]
+      },
+      "chart-purple": {
+        "role": "secondary",
+        "displayName": "Chart purple",
+        "tonalRamp": [
+          "oklch(15.0% 0.0326 310.0)",
+          "oklch(26.4% 0.0530 310.0)",
+          "oklch(37.9% 0.0667 310.0)",
+          "oklch(49.3% 0.0718 310.0)",
+          "oklch(60.7% 0.0678 310.0)",
+          "oklch(72.1% 0.0552 310.0)",
+          "oklch(83.6% 0.0354 310.0)",
+          "oklch(95.0% 0.0112 310.0)"
+        ]
+      },
+      "chart-green": {
+        "role": "secondary",
+        "displayName": "Chart green",
+        "tonalRamp": [
+          "oklch(15.0% 0.0373 154.6)",
+          "oklch(26.4% 0.0606 154.6)",
+          "oklch(37.9% 0.0763 154.6)",
+          "oklch(49.3% 0.0821 154.6)",
+          "oklch(60.7% 0.0775 154.6)",
+          "oklch(72.1% 0.0631 154.6)",
+          "oklch(83.6% 0.0405 154.6)",
+          "oklch(95.0% 0.0128 154.6)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Page h1; 30px/650, tight tracking." },
-      "hero": { "displayName": "Hero", "purpose": "Login story headline on rail ink." },
-      "metric": { "displayName": "Metric", "purpose": "34px tabular numerals for indexed counts." },
-      "title": { "displayName": "Title", "purpose": "Panel and card headings; 16–18px/750." },
-      "body": { "displayName": "Body", "purpose": "12–14px working copy at comfortable leading." },
-      "small": { "displayName": "Small", "purpose": "Tabular tables, labels and call numbers; never below 11px for functional text." },
-      "label": { "displayName": "Label", "purpose": "Stamped uppercase classification labels; tracking, never a kicker above a heading." },
-      "mono": { "role": "neutral", "displayName": "Mono", "purpose": "Roll and call numbers only." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Editorial section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Compact working-panel headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Body text and forms."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Control labels."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Tabular working numbers."
+      }
     },
     "shadows": [
-      { "name": "sheet-edge", "value": "14px 0 40px #20241f40", "purpose": "Mobile drawer edge; the only deep shadow." }
+      {
+        "name": "dialog",
+        "value": "0 24px 80px #241c2738",
+        "purpose": "Shared dialog elevation."
+      }
     ],
     "motion": [
-      { "name": "slip-open", "value": "180ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Pull-slip reveal; one authored motion moment." },
-      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Kill switch for all animation." }
+      {
+        "name": "state-transition",
+        "value": "160ms",
+        "purpose": "Background, text, and border color changes."
+      },
+      {
+        "name": "evidence-unfold",
+        "value": "220ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Evidence fade and three-pixel reveal."
+      },
+      {
+        "name": "reduced-motion",
+        "value": ".01ms",
+        "purpose": "Animation/transition duration when reduced motion is requested."
+      }
     ],
     "breakpoints": [
-      { "name": "compact", "value": "600px" },
-      { "name": "mobile", "value": "767px" },
-      { "name": "tablet", "value": "1024px" },
-      { "name": "narrow", "value": "1280px" },
-      { "name": "wide", "value": "1600px" }
+      {
+        "name": "small-phone-max",
+        "value": "480px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "drawer-max",
+        "value": "1023px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Vermilion stamp fill with card-white text; the single assertive control.",
-      "html": "<button class='button button-primary'>Open the index</button>",
-      "css": ".button-primary { background: #b23a2b; color: #fffdf7; } .button-primary:hover:not(:disabled) { background: #8d2c20; }"
+      "description": "Plum action with the shared control geometry.",
+      "html": "<button class=\"ds-primary\">Record this week</button>",
+      "css": ".ds-primary{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 15px;border:1px solid transparent;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;transition:background-color 160ms,color 160ms,border-color 160ms;background:var(--plum,#49344c);color:white}.ds-primary:hover{background:#624969}.ds-primary:focus-visible{outline:3px solid #8c6293;outline-offset:3px;}.ds-primary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}"
     },
     {
-      "name": "Index Card",
-      "kind": "card",
-      "refersTo": "alert-card",
-      "description": "A ruled catalogue card: paper ground, hairline frame, classification tab, tabular risk line.",
-      "html": "<article class='alert-card'><span class='card-tab'>Priority</span><h3>Riya Patel</h3><p class='alert-risk'>Risk 55% → 86%</p></article>",
-      "css": ".alert-card { border: 1px solid #ded9cd; border-radius: 5px; background: #fffdf7; } .alert-risk { font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; }"
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined supporting action.",
+      "html": "<button class=\"ds-secondary\">Refresh</button>",
+      "css": ".ds-secondary{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 15px;border:1px solid transparent;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;transition:background-color 160ms,color 160ms,border-color 160ms;background:transparent;border-color:#d5cdd4;color:var(--plum,#49344c)}.ds-secondary:hover{background:var(--lilac,#eee8f0)}.ds-secondary:focus-visible{outline:3px solid #8c6293;outline-offset:3px;}.ds-secondary:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-secondary{transition-duration:.01ms}}"
     },
     {
-      "name": "Classification Tab",
+      "name": "Labelled login input",
+      "kind": "input",
+      "refersTo": "login-input",
+      "description": "White login field with the application focus treatment.",
+      "html": "<label class=\"ds-label\" for=\"ds-school\">School</label><input class=\"ds-input\" id=\"ds-school\" placeholder=\"School slug\" />",
+      "css": ".ds-label{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink,#342737)}.ds-input{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:block;width:calc(100% - 28px);height:24px;padding:10px 13px;border:1px solid #cfc5ce;border-radius:6px;font-size:14px;background:var(--surface,#fff);color:var(--ink,#342737);transition:background-color 160ms,color 160ms,border-color 160ms;}.ds-input::placeholder{color:var(--muted,#716966)}.ds-input:focus-visible{outline:3px solid #8c6293;outline-offset:3px;}.ds-input:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-input{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Selected role navigation on the deep-plum rail.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a class=\"ds-nav-link ds-selected\" href=\"#overview\" aria-current=\"page\">Overview</a><a class=\"ds-nav-link\" href=\"#classes\">My classes</a></nav>",
+      "css": ".ds-nav{background:var(--plum-deep,#352638);padding:20px;max-width:232px}.ds-nav-link{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:flex;align-items:center;min-height:24px;padding:11px 14px;color:#ddcfdf;border-radius:7px;margin-bottom:5px;font-size:14px;text-decoration:none;transition:background-color 160ms,color 160ms,border-color 160ms;}.ds-nav-link:hover{background:#4c3a50;color:white}.ds-nav-link.ds-selected{background:#efe7f1;color:var(--plum,#49344c);font-weight:600}.ds-nav-link:focus-visible{outline:3px solid #8c6293;outline-offset:3px;}@media(prefers-reduced-motion:reduce){.ds-nav-link{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Check-in label",
       "kind": "chip",
-      "refersTo": "card-tab",
-      "description": "Named disposition hanging from the card's top-right edge; never color alone.",
-      "html": "<span class='card-tab tab-priority_support'>Priority</span>",
-      "css": ".card-tab { position: absolute; top: -1px; right: 14px; border: 1px solid #c9c3b3; border-top: 0; border-radius: 0 0 3px 3px; background: #eeece4; font-size: 9px; font-weight: 700; letter-spacing: 0.9px; text-transform: uppercase; }"
+      "refersTo": "status-critical",
+      "description": "A named semantic state; the color supplements the words.",
+      "html": "<span class=\"ds-status\">Check in</span>",
+      "css": ".ds-status{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:5px;font-size:11px;white-space:nowrap;color:var(--rust,#963d2e);background:var(--rust-wash,#fbefea)}"
     },
     {
-      "name": "Pull Slip",
-      "kind": "disclosure",
-      "refersTo": "pull-slip",
-      "description": "Native details/summary holding the evidence behind a pulled signal.",
-      "html": "<details class='pull-slip'><summary>Why this card was pulled</summary><div class='slip-body'>Evidence and suggested next step.</div></details>",
-      "css": ".pull-slip { border-top: 1px dashed #c9c3b3; } .pull-slip summary { color: #8f6a16; font-size: 10px; font-weight: 700; }"
+      "name": "Signal panel",
+      "kind": "card",
+      "refersTo": "signal-panel",
+      "description": "White, ruled working container with softly rounded outer corners.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-panel-heading\"><h2>Students to check in with</h2><p>Across your classes</p></div><p class=\"ds-panel-row\">New signals appear after weekly observations are assessed.</p></section>",
+      "css": ".ds-panel{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);background:var(--surface,#fff);border:1px solid var(--rule,#e3dfda);border-radius:var(--radius,12px);overflow:hidden;color:var(--ink,#342737)}.ds-panel-heading{padding:24px 24px 18px}.ds-panel-heading h2{margin:0;font-size:17px;font-weight:600;letter-spacing:-.3px}.ds-panel-heading p{margin:5px 0 0;font-size:12px;color:var(--muted,#716966)}.ds-panel-row{margin:0;padding:23px 24px 18px;border-top:1px solid var(--rule,#e3dfda);font-size:13px}"
     },
     {
-      "name": "Decision Band",
-      "kind": "banner",
-      "refersTo": "decision-band",
-      "description": "Sticky paper band with a vermilion tab marker, monumental count and jump action.",
-      "html": "<section class='decision-band'><span class='decision-icon'>Index</span><span class='decision-value'>07</span><a class='decision-action'>Open the index</a></section>",
-      "css": ".decision-band { background: #fffdf7; border-bottom: 1px solid #c9c3b3; } .decision-icon { background: #b23a2b; color: #fffdf7; text-transform: uppercase; }"
+      "name": "Evidence disclosure",
+      "kind": "custom",
+      "refersTo": "evidence-content",
+      "description": "Native in-place disclosure; this preview uses the implemented missing-evidence state.",
+      "html": "<details class=\"ds-evidence\"><summary>View evidence <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><div class=\"ds-evidence-content\"><strong>What informed this signal</strong><p>No contributing factors are available for this observation.</p><small>Advisory only. Review the context before taking action.</small></div></details>",
+      "css": ".ds-evidence{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);color:var(--ink,#342737)}.ds-evidence summary{display:flex;align-items:center;gap:8px;width:fit-content;font-size:12px;color:var(--muted,#716966);list-style:none;cursor:pointer;transition:background-color 160ms,color 160ms,border-color 160ms;}.ds-evidence summary::-webkit-details-marker{display:none}.ds-evidence summary:focus-visible{outline:3px solid #8c6293;outline-offset:3px;}.ds-evidence[open] summary{color:var(--plum,#49344c)}.ds-evidence[open] summary svg{transform:rotate(180deg)}.ds-evidence-content{background:#f6f2f7;padding:18px;margin-top:13px;border-radius:6px;font-size:13px;line-height:1.7;animation:ds-unfold 220ms var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-evidence-content small{display:block;color:var(--muted,#716966);margin-top:10px}@keyframes ds-unfold{from{opacity:.5;transform:translateY(-3px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.ds-evidence-content{animation-duration:.01ms}.ds-evidence summary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Metric reading",
+      "kind": "custom",
+      "refersTo": "metric",
+      "description": "A quiet labelled reading with supporting context.",
+      "html": "<div class=\"ds-metric\"><div class=\"ds-metric-label\">Students</div><div class=\"ds-metric-value\">—</div><p class=\"ds-metric-detail\">Enrolled in this class</p></div>",
+      "css": ".ds-metric{font-family:var(--font-sans,\"Segoe UI\",Arial,sans-serif);padding:18px 20px;border-bottom:1px solid var(--rule,#e3dfda);color:var(--ink,#342737)}.ds-metric-label{font-size:12px;color:var(--muted,#716966)}.ds-metric-value{font-size:31px;line-height:1.3;font-weight:550;font-variant-numeric:tabular-nums;margin-top:6px;letter-spacing:-.8px}.ds-metric-detail{font-size:11px;color:var(--muted,#716966);margin:6px 0 0}"
     }
   ],
   "narrative": {
-    "northStar": "The Signal Index",
-    "overview": "EduGuard reads as a classified catalogue of advisory student signals on warm stock paper. Charcoal ink, hairline rules and 34px tabular numerals carry the data; one vermilion stamp marks every live decision, with ochre and sage as watch and improving tints. Each signal is an indexed card with a named classification tab and an evidence pull slip; governance is printed on the shell. Standard web controls only — the world contributes type, palette, density and one signature move, never a costume UI.",
+    "northStar": "The learning journal",
+    "overview": "EduGuard uses the quiet clarity of academic editorial design: warm paper, deep plum, generous Georgia headings, and precise sans-serif controls. The interface gives people and their observations room to be read while keeping records, evidence, and actions close together.\n\nThe system is calm and practical. Fine rules and pale washes organize information; conventional navigation, tables, forms, and native disclosures carry the work. The journal is expressed through typography and spacing, without inventing unfamiliar controls or decorative imagery.",
     "keyCharacteristics": [
-      "Warm catalogue stock and card white under charcoal ink, never cool blue slate.",
-      "One vermilion stamp for every live decision; ochre and sage stay secondary.",
-      "Hairline ruled lines instead of resting shadows.",
-      "34px tabular metric numerals and monospace call numbers.",
-      "Indexed cards with classification tabs and native evidence disclosures.",
-      "Charts use ink lines with a single ochre forecast line against a warm grid."
+      "Warm paper and white surfaces with a deep plum navigation rail.",
+      "Georgia headings paired with Segoe UI controls and tabular working numbers.",
+      "Ruled records, softly rounded panels, and restrained lilac emphasis.",
+      "Text-labelled rust, ochre, and sage states.",
+      "Evidence revealed in place with native disclosures.",
+      "Plain language that preserves human judgment and student privacy."
     ],
     "rules": [
-      { "name": "The Stamp Rule", "body": "Vermilion marks live decisions and focus only; it never becomes a full page field or decorative accent." },
-      { "name": "The Named Tab Rule", "body": "Every indexed card states its disposition in words on a tab; color is never the sole signal." },
-      { "name": "The Evidence Rule", "body": "Every pulled card opens a slip explaining the exact evidence and the teacher-owned next step." },
-      { "name": "The Hairline Rule", "body": "Resting surfaces are separated by 1px rules and washes, not shadows." },
-      { "name": "The No-Kicker Rule", "body": "Headings carry their own weight; no tracked micro-label sits above them." }
+      {
+        "name": "The Named State Rule",
+        "body": "Every support state is named in text; color and icons supplement that name.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Order Rule",
+        "body": "Use heading size and space to establish hierarchy; keep operational labels quiet and readable.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "Establish ordinary hierarchy with spacing, rules, and tone; reserve pronounced elevation for content floating above the page.",
+        "section": "elevation"
+      }
     ],
     "dos": [
-      "Do use 12px as the floor for functional text and tabular numerals for aligned values.",
-      "Do keep the vermilion focus stamp visible against paper ground with adequate contrast.",
-      "Do use the ochre forecast line and ink observed line in charts.",
-      "Do keep advisory, teacher-only governance visible in the shell and on evidence slips.",
-      "Do honor prefers-reduced-motion and keep the pull slip as the only authored motion moment."
+      "Do use the shared tokens, page headers, controls, and state components across roles.",
+      "Do keep support states text-labelled and keyboard focus visible.",
+      "Do keep evidence beside the teacher's review action and identify model output as advisory.",
+      "Do preserve reduced-motion behavior and contain wide records within table scroll regions.",
+      "Do label synthetic, read-only demo data clearly and keep validity limits honest."
     ],
     "donts": [
-      "Don't introduce kickers, side-tab accents, gradient text, glow shadows or generic icon tiles.",
-      "Don't render risk as a verdict or expose AI output in student-facing surfaces.",
-      "Don't invent data the model did not use; demo data stays visibly synthetic.",
-      "Don't turn the catalogue metaphor into navigation or bespoke controls.",
-      "Don't regress to the retired evergreen, airport-yellow or navy palettes."
+      "Don't expose risk probabilities, risk levels, internal severity, or teacher-only AI outputs in student views.",
+      "Don't present a signal as a diagnosis, verdict, or demonstrated real-school performance.",
+      "Don't replace raw weekly observation fields with derived model features.",
+      "Don't invent observations, evidence, customers, testimonials, deployment claims, or unimplemented product capabilities.",
+      "Don't reintroduce the retired catalogue tabs, vermilion action palette, or stamped micro-label system."
     ]
   }
 }
